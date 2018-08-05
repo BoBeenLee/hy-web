@@ -1,21 +1,9 @@
-import React, { Component } from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { configure, addDecorator } from "@kadira/storybook";
-import _ from "lodash";
-import { BrowserRouter } from "react-router-dom";
-// import '../src/layouts/styles';
+import { configure } from '@storybook/react';
 
-const req = require.context("../", true, /.stories.js$/);
-
-// addDecorator(storyFn => (
-//     <BrowserRouter>
-//         <div>{storyFn()}</div>
-//     </BrowserRouter>
-// ));
-
+// automatically import all files ending in *.stories.js
+const req = require.context('../stories', true, /.stories.js$/);
 function loadStories() {
-    // addDecorator(withThemes);
-    _.forEach(req.keys(), req);
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);
