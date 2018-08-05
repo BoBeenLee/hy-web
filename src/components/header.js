@@ -34,18 +34,24 @@ const MenuItem = styled.li`
 
 `;
 
+const MenuImage = styled.img``;
+
 const menus = [{
   name: "main",
-  path: "/"
+  path: "/",
+  icon: require("./images/active_main_icon@2x.png")
 }, {
   name: "gallery",
-  path: "/gallery"
+  path: "/gallery",
+  icon: require("./images/gallery_icon@2x.png")
 }, {
   name: "cheer",
-  path: "/cheer"
+  path: "/cheer",
+  icon: require("./images/cheer_icon@2x.png")
 }, {
   name: "people",
-  path: "/people"
+  path: "/people",
+  icon: require("./images/people_icon@2x.png")
 }];
 
 const Header = ({ siteTitle }) => (
@@ -60,7 +66,7 @@ const Header = ({ siteTitle }) => (
             <MenuItem>
               <Link
                 to={menu.path}>
-                {menu.name}
+                <MenuImage src={menu.icon} />
               </Link>
             </MenuItem>
           );

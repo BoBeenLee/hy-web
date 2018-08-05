@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components';
+import 'babel-polyfill';
 
-import Header from '../components/header'
-import "normalize.css";
+import { Header } from '../components';
+
+// import "normalize.css";
 
 injectGlobal`
 #___gatsby {
@@ -13,7 +15,7 @@ injectGlobal`
 html, body {
   height: 100%;
 }
-`
+`;
 
 const Container = styled.div`
   height: 100%;

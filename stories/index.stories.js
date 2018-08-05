@@ -4,8 +4,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import { CheerCard } from '../src/components';
+import { CheerCard, CheerInput, InfoSection } from '../src/components';
 
 storiesOf('HY', module)
   .add('with CheerCard', () => <CheerCard />)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+  .add('with CheerInput', () => <CheerInput />)
+  .add('with InfoSection', () => <InfoSection />);
