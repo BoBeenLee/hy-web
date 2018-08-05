@@ -1,12 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled, { injectGlobal } from 'styled-components';
 
 import Header from '../components/header'
-import './index.css'
+import "normalize.css";
+
+injectGlobal`
+#___gatsby {
+  height: 100%;  
+}
+html, body {
+  height: 100%;
+}
+`
+
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+`;
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Container>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -15,17 +32,10 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div>
       {children()}
     </div>
-  </div>
+  </Container>
 )
 
 Layout.propTypes = {
