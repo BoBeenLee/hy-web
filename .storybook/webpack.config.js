@@ -8,10 +8,7 @@ module.exports = (baseConfig, env) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     include: path.resolve(__dirname, "../src"),
-    loader: require.resolve("ts-loader"),
-    options: {
-      configFile: ".storybook/tsconfig.json"
-    }
+    loader: require.resolve("ts-loader")
   });
   config.resolve.extensions.push(".ts", ".tsx");
 

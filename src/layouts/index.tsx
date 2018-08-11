@@ -1,61 +1,54 @@
-import Link from "gatsby-link";
-import * as React from "react";
-import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
-import SidebarMenu from "../components/SidebarMenu/SidebarMenu";
-import { Segment, Icon, Container, Sidebar, Button } from "semantic-ui-react";
-import "../css/styles.css";
-import "../css/responsive.css";
-import "../css/semantic.min.css";
-import "prismjs/themes/prism-okaidia.css";
-import { Provider } from "react-redux";
-import { store } from "../store";
+import React, { SFC } from "react";
+import Helmet from "react-helmet";
+import styled, { injectGlobal } from "styled-components";
 
-export const menuItems = [
-  { name: "Home", path: "/", exact: true, icon: "home", inverted: true },
-  { name: "About", path: "/about/", exact: true, icon: "info circle" },
-  { name: "Blog", path: "/blog/", exact: false, icon: "newspaper" },
-];
+import { Header } from "../components";
 
-interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  location: {
-    pathname: string;
-  };
+interface IProps {
   children: any;
+
 }
 
-export default class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
-  render() {
-    const { pathname } = this.props.location;
-    const isHome = pathname === "/";
+injectGlobal`
+#___gatsby {
+  height: 100%;  
+}
+html, body {
+  height: 100%;
+}
+`;
 
-    return (
-      <Provider store={store}>
-        <Sidebar.Pushable as={Segment}>
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+`;
 
-          <SidebarMenu Link={Link} pathname={pathname} items={menuItems} visible={false} />
+const Layout: SFC<IProps> = ({ children }) => (
+  <Container>
+    {/* <Helmet
+      title={"HY"}
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
+      ]}
+    /> */}
+    <Header />
+    <div>
+      {children()}
+    </div>
+  </Container>
+);
 
-          <Sidebar.Pusher style={{ minHeight: "100vh" }}>
-            {/* Header */}
-            {isHome ? null : <HeaderMenu
-              Link={Link}
-              pathname={pathname}
-              items={menuItems}
-            />}
+export default Layout;
 
-            {/* Render children pages */}
-            <div style={{ paddingBottom: 60 }}>
-              {this.props.children()}
-            </div>
-
-            {/* Footer */}
-            <Segment inverted vertical style={{ position: "absolute", bottom: 0, width: "100%" }}>
-              <Container textAlign="center">
-                <p>Powered with <Icon name="heart" /> by Gatsby 1.0</p>
-              </Container>
-            </Segment>
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      </Provider>
-    );
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
   }
-}
+`;
