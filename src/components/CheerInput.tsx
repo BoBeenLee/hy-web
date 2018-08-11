@@ -11,6 +11,7 @@ const Container = styled.div`
     padding-left: 39px;
     padding-right: 39px;
     box-shadow: 2px 2px 10px #6fc7e2;
+    background-color: white;
 `;
 
 const Input = styled.input`

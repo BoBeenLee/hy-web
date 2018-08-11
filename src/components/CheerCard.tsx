@@ -35,6 +35,7 @@ const Date = styled.div`
     font-size: 16px;
     color: #939eab;
     font-weight: bold;
+    margin-bottom: 3px;
 `;
 
 const Time = styled.div`

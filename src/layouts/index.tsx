@@ -6,7 +6,6 @@ import { Header } from "../components";
 
 interface IProps {
   children: any;
-
 }
 
 injectGlobal`
@@ -14,6 +13,7 @@ injectGlobal`
   height: 100%;  
 }
 html, body {
+  margin: 0px;
   height: 100%;
 }
 `;
