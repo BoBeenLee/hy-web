@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { InfoSection } from '../components';
 
@@ -151,6 +151,10 @@ const Section4 = styled.div`
   padding-left: 102px;
 `;
 
+const IntroSection4ContentCSS = css`
+  line-height: 24px;
+`;
+
 const IntroSection4Text1 = styled(InfoSection)`
   display: inline-block;
   width: 461px;
@@ -168,9 +172,7 @@ const Section5 = styled.div`
   padding-left: 102px;
 `;
 
-const IntroSection5Text = styled(InfoSection)`
-
-`;
+const IntroSection5Text = styled(InfoSection)``;
 
 const Intro1BottmImageView = styled.div`
    position: absolute;
@@ -236,7 +238,9 @@ const IndexPage = () => (
 
 한양대정문(17311) 직행 3100, 3101,3102
 
-한양대게스트하우스(17361,17368) 일반 10-1 직행 3102`} />
+한양대게스트하우스(17361,17368) 일반 10-1 직행 3102`}
+          contentCSS={IntroSection4ContentCSS}
+        />
         <IntroSection4Text2
           title="장소" hideDivier={false} hideTitle={false}
           dividerWidth={461}

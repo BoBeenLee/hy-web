@@ -1,14 +1,22 @@
 import React, { SFC } from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import styled, { injectGlobal } from "styled-components";
 
 import { Header } from "../components";
+import { NotoSansKRRegular, NotoSansKRMedium } from '../fonts/index';
 
 interface IProps {
   children: any;
 }
 
 injectGlobal`
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url(${NotoSansKRRegular});
+  font-weight: normal;
+  font-style: normal;
+}
+
 #___gatsby {
   height: 100%;  
 }
@@ -17,6 +25,7 @@ html, body {
   height: 100%;
 }
 * {
+  font-family: "NotoSansKR";
   box-sizing: border-box;
 }
 `;
@@ -30,13 +39,11 @@ const Container = styled.div`
 
 const Layout: SFC<IProps> = ({ children }) => (
   <Container>
-    {/* <Helmet
-      title={"HY"}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    /> */}
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>HY</title>
+      <meta name="description" content="Helmet application" />
+    </Helmet>
     <Header />
     {children()}
   </Container>

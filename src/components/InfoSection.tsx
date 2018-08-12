@@ -1,10 +1,11 @@
 import React, { SFC } from "react";
-import styled from "styled-components";
+import styled, { ThemedCssFunction } from "styled-components";
 
 interface IProps {
     className?: string;
     title?: string;
     content: string;
+    contentCSS?: any;
     hideTitle: boolean;
     hideDivier: boolean;
     dividerWidth?: number;
@@ -26,18 +27,20 @@ const Divider = styled.div.attrs<{ width: number }>({})`
     border-style: solid;
 `;
 
-const Content = styled.pre`
+const Content = styled.pre.attrs<{ contentCSS?: any }>({})`
     font-size: 24px;
     color: #939eab;
+    line-height: 39px;
     margin-top: 21px;
+    ${({ contentCSS }) => contentCSS};
 `;
 
-const InfoSection: SFC<IProps> = ({ className, title, content, hideTitle, hideDivier, dividerWidth = 0 }) => {
+const InfoSection: SFC<IProps> = ({ className, title, content, contentCSS, hideTitle, hideDivier, dividerWidth = 0 }) => {
     return (
         <Container className={className}>
             {!hideTitle ? <Title>{title}</Title> : null}
             {!hideDivier ? <Divider width={dividerWidth} /> : null}
-            <Content>
+            <Content contentCSS={contentCSS!}>
                 {content}
             </Content>
         </Container>

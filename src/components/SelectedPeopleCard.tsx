@@ -27,6 +27,7 @@ const Title = styled.div`
 const Description = styled.div`
     font-size: 16px;
     color: #939eab;
+    line-height: 29px;
 `;
 
 const Section1 = styled.div`

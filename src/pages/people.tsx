@@ -29,6 +29,7 @@ const PeopleIntroName = styled.div`
     top: 17px;
     left: 18px;
     font-size: 42px;
+    line-height: 50px;
     color: white;
     z-index: 1;
 `;
@@ -70,48 +71,50 @@ class PeoplePage extends Component {
             <Container>
                 <SelectedPeopleCardView />
                 <PeopleTable>
-                    <PeopleTR>
-                        <PeopleTD>
-                            <PeopleIntroView>
-                                <PeopleIntroName>
-                                    졸업<br />
-                                    준비<br />
-                                    위원회
+                    <tbody>
+                        <PeopleTR>
+                            <PeopleTD>
+                                <PeopleIntroView>
+                                    <PeopleIntroName>
+                                        졸업<br />
+                                        준비<br />
+                                        위원회
                                 </PeopleIntroName>
-                                <PeopleIntroRole>
-                                    _그래픽팀
+                                    <PeopleIntroRole>
+                                        _그래픽팀
                                 </PeopleIntroRole>
-                                <PeopleIntroImage src={require("./images/people-1@2x.png")} />
-                            </PeopleIntroView>
-                        </PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                    </PeopleTR>
-                    <PeopleTR>
-                        <PeopleTD>
-                            <PeopleIntroView>
-                                <PeopleIntroName>
-                                    졸업<br />
-                                    준비<br />
-                                    위원회
+                                    <PeopleIntroImage src={require("./images/people-1@2x.png")} />
+                                </PeopleIntroView>
+                            </PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        </PeopleTR>
+                        <PeopleTR>
+                            <PeopleTD>
+                                <PeopleIntroView>
+                                    <PeopleIntroName>
+                                        졸업<br />
+                                        준비<br />
+                                        위원회
                                 </PeopleIntroName>
-                                <PeopleIntroRole>
-                                    _운영팀
+                                    <PeopleIntroRole>
+                                        _운영팀
                                 </PeopleIntroRole>
-                                <PeopleIntroImage src={require("./images/people-2@2x.png")} />
-                            </PeopleIntroView>
-                        </PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={true} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                    </PeopleTR>
-                    <PeopleTR>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                    </PeopleTR>
+                                    <PeopleIntroImage src={require("./images/people-2@2x.png")} />
+                                </PeopleIntroView>
+                            </PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={true} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        </PeopleTR>
+                        <PeopleTR>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        </PeopleTR>
+                    </tbody>
                 </PeopleTable>
             </Container>
         );

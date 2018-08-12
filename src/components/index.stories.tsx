@@ -11,4 +11,4 @@ storiesOf("HY", module)
     .add("with InfoSection", () => <InfoSection hideDivier={false} hideTitle={false} title="Hello" content={"loremlorem"} dividerWidth={10} />)
     .add("with PeopleCard", () => <PeopleCard isActive={true} />)
     .add("with SelectedPeopleCard", () => <SelectedPeopleCard />)
-    .add("with GalleryTopBar", () => <GalleryTopBar menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentIndex={0} />);
+    .add("with GalleryTopBar", () => <GalleryTopBar onIndexChange={action("indexChange")} menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentIndex={0} />);
