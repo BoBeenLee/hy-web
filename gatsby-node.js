@@ -4,6 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-exports.modifyWebpackConfig = ({config, stage}) => {
+exports.modifyBabelrc = ({ babelrc }) => ({
+  ...babelrc,
+  plugins: babelrc.plugins.concat(['transform-regenerator']),
+})
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
   return config;
 };

@@ -1,4 +1,4 @@
-import * as firebase from "firebase";
+import firebase from "firebase";
 
 // tslint:disable:object-literal-sort-keys
 const config = {
@@ -19,7 +19,7 @@ const start = () => {
     database = firebase.database();
 };
 
-const get = async () => {
+const get = () => {
     database.ref(`/${DB_NAME}`).on("value", (snapshot) => {
         console.log(snapshot.val());
     }, (errorObject: any) => {
