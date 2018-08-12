@@ -9,7 +9,7 @@ interface IProps {
 }
 
 injectGlobal`
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 #___gatsby {
   height: 100%;  
