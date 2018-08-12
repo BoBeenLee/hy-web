@@ -69,25 +69,25 @@ const MenuIcon = styled.img`
 `;
 
 const menus: any = [{
-  activeIcon: null,
+  activeIcon: require("./images/active_main_icon@2x.png"),
   name: "main",
   path: "/",
-  icon: require("./images/active_main_icon@2x.png"),
+  icon: require("./images/main_icon@2x.png"),
 }, {
-  activeIcon: null,
+  activeIcon: require("./images/active_gallery_icon@2x.png"),
   name: "gallery",
   path: "/gallery",
   icon: require("./images/gallery_icon@2x.png"),
 }, {
-  activeIcon: null,
-  name: "cheer",
-  path: "/cheer",
-  icon: require("./images/cheer_icon@2x.png"),
-}, {
-  activeIcon: null,
+  activeIcon: require("./images/active_people_icon@2x.png"),
   name: "people",
   path: "/people",
   icon: require("./images/people_icon@2x.png"),
+}, {
+  activeIcon: require("./images/active_cheer_icon@2x.png"),
+  name: "cheer",
+  path: "/cheer",
+  icon: require("./images/cheer_icon@2x.png"),
 }];
 
 class Header extends React.Component<object, IStates> {
@@ -109,7 +109,7 @@ class Header extends React.Component<object, IStates> {
                 <MenuItem key={menu.name}>
                   <MenuIconView active={currentIndex === index}>
                     <Link isActive={_.partial(this.isActive, index)} to={menu.path}>
-                      <MenuIcon src={menu.icon} />
+                      <MenuIcon src={currentIndex === index ? menu.activeIcon : menu.icon} />
                     </Link>
                   </MenuIconView>
                 </MenuItem>
