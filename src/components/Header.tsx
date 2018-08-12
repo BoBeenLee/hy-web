@@ -14,6 +14,8 @@ const Container = styled.div`
   width: 80px;
   align-items: center;
   background-color: #fff;
+  box-shadow: 2px 2px 10px #6fc7e2;
+  z-index: 10;
 `;
 
 const HYIconView = styled.div`
@@ -70,24 +72,24 @@ const MenuIcon = styled.img`
 
 const menus: any = [{
   activeIcon: require("./images/active_main_icon@2x.png"),
+  icon: require("./images/main_icon@2x.png"),
   name: "main",
   path: "/",
-  icon: require("./images/main_icon@2x.png"),
 }, {
   activeIcon: require("./images/active_gallery_icon@2x.png"),
+  icon: require("./images/gallery_icon@2x.png"),
   name: "gallery",
   path: "/gallery",
-  icon: require("./images/gallery_icon@2x.png"),
 }, {
   activeIcon: require("./images/active_people_icon@2x.png"),
+  icon: require("./images/people_icon@2x.png"),
   name: "people",
   path: "/people",
-  icon: require("./images/people_icon@2x.png"),
 }, {
   activeIcon: require("./images/active_cheer_icon@2x.png"),
+  icon: require("./images/cheer_icon@2x.png"),
   name: "cheer",
   path: "/cheer",
-  icon: require("./images/cheer_icon@2x.png"),
 }];
 
 class Header extends React.Component<object, IStates> {

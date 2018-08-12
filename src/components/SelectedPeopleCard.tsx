@@ -7,7 +7,7 @@ interface IProps {
 
 const Container = styled.div`
     min-width: 1294px;
-    width: 1294px;
+    width: 1294px
     height: 338px;
 `;
 

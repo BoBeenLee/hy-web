@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { SelectedPeopleCard, PeopleCard } from '../components';
 
 const Container = styled.div`
-
     width: 100%;
     height: 100%;
     padding-top: 24px;
@@ -15,13 +14,13 @@ const Container = styled.div`
     background-color: #f0f9fc;
 `;
 
-const SelectedPeopleCardView = styled(SelectedPeopleCard)`
-    width: 100%;
-`;
+const SelectedPeopleCardView = styled(SelectedPeopleCard)``;
+
+const PeopleCardView = styled(PeopleCard)``;
 
 const PeopleIntroView = styled.div`
     position: relative;
-    width: 296px;
+    width: 294px;
     height: 285px;
 `;
 
@@ -52,7 +51,8 @@ const PeopleIntroImage = styled.img`
 `;
 
 const PeopleTable = styled.table`
-    width: 100%;
+    min-width: 1294px;
+    width: 1294px;
     border: 0px;
     margin-top: 40px;
 `;
@@ -60,7 +60,7 @@ const PeopleTable = styled.table`
 const PeopleTR = styled.tr``;
 
 const PeopleTD = styled.td`
-    padding-right: 40px;
+    padding-right: 35px;
     padding-bottom: 33px;
 `;
 
@@ -84,9 +84,9 @@ class PeoplePage extends Component {
                                 <PeopleIntroImage src={require("./images/people-1@2x.png")} />
                             </PeopleIntroView>
                         </PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD style={{ paddingRight: 0 }}><PeopleCard isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
                     </PeopleTR>
                     <PeopleTR>
                         <PeopleTD>
@@ -102,15 +102,15 @@ class PeoplePage extends Component {
                                 <PeopleIntroImage src={require("./images/people-2@2x.png")} />
                             </PeopleIntroView>
                         </PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD style={{ paddingRight: 0 }}><PeopleCard isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={true} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
                     </PeopleTR>
                     <PeopleTR>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD><PeopleCard isActive={false} /></PeopleTD>
-                        <PeopleTD style={{ paddingRight: 0 }}><PeopleCard isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                        <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
                     </PeopleTR>
                 </PeopleTable>
             </Container>
