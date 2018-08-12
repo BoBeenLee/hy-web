@@ -9,12 +9,7 @@ interface IProps {
 }
 
 injectGlobal`
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url(${require('../fonts/NotoSansKR-Regular.otf')});
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 #___gatsby {
   height: 100%;  
@@ -24,7 +19,7 @@ html, body {
   height: 100%;
 }
 * {
-  font-family: "NotoSansKR";
+  font-family: "Noto Sans KR";
   box-sizing: border-box;
 }
 `;
