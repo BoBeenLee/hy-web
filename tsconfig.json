@@ -5,14 +5,18 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "typeRoots": ["./typings", "./node_modules/@types"],
+        "typeRoots": [
+            "./typings",
+            "./node_modules/@types"
+        ],
         "module": "commonjs",
         "target": "esnext",
         "jsx": "react",
         "lib": [
             "dom",
             "esnext"
-        ]
+        ],
+        "noUnusedLocals": false
     },
     "include": [
         "./src/**/*"

@@ -16,7 +16,6 @@ const Container = styled.div`
 `;
 
 class GalleryPage extends Component<object, IStates> {
-
     public state = {
         currentIndex: 0
     };
@@ -24,9 +23,15 @@ class GalleryPage extends Component<object, IStates> {
         const { currentIndex } = this.state;
         return (
             <Container>
-                <GalleryTopBar menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentIndex={currentIndex} />
+                <GalleryTopBar onIndexChange={this.onIndexChange} menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentIndex={currentIndex} />
             </Container>
         );
+    }
+
+    private onIndexChange = (index: number) => {
+        this.setState({
+            currentIndex: index
+        });
     }
 }
 

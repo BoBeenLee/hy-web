@@ -5,6 +5,7 @@ import styled from 'styled-components';
 interface IProps {
     currentIndex: number;
     menus: string[];
+    onIndexChange: (index: number) => void;
 }
 
 const Container = styled.div`
@@ -32,19 +33,20 @@ const MenuText = styled.div.attrs<{ isActive: boolean; }>({})`
     font-size: 16px;
     color: #637280;
     opacity: ${({ isActive }) => isActive ? '1' : '0.3'};
+    cursor: pointer;
 `;
 
 
 class GalleryTopBar extends Component<IProps> {
     render() {
-        const { currentIndex, menus } = this.props;
+        const { currentIndex, menus, onIndexChange } = this.props;
         return (
             <Container>
                 <Menu>
                     {_.map(menus, (menu, index) => {
                         return (
                             <MenuItem key={menu}>
-                                <MenuText isActive={currentIndex === index}>{menu}</MenuText>
+                                <MenuText onClick={_.partial(onIndexChange, index)} isActive={currentIndex === index}>{menu}</MenuText>
                             </MenuItem>
                         )
                     })}
