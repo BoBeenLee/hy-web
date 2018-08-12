@@ -16,6 +16,9 @@ html, body {
   margin: 0px;
   height: 100%;
 }
+* {
+  box-sizing: border-box;
+}
 `;
 
 const Container = styled.div`

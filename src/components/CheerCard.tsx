@@ -31,7 +31,7 @@ const CheerMiddleCSS = css`
 `;
 
 const Container = styled.div.attrs<{ type: CheerType }>({})`
-    height: 94px;
+    height: 98px;
     background-color: #fff;
     display: flex;
     flex: 1;

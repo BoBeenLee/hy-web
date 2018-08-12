@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+interface IProps {
+    className?: string;
+}
+
 const Container = styled.div`
+    min-width: 1294px;
     width: 1294px;
     height: 338px;
 `;
@@ -69,10 +74,12 @@ const Section2Description = Description.extend`
     margin-top: 17px;
 `;
 
-class SelectedPeopleCard extends Component {
+class SelectedPeopleCard extends Component<IProps> {
     public render() {
+        const { className } = this.props;
+
         return (
-            <Container>
+            <Container className={className}>
                 <ProfileImage src={"http://via.placeholder.com/312x312"} />
                 <Section1>
                     <Section1ItemView>

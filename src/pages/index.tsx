@@ -137,17 +137,17 @@ margin-left: 25px;
 
 const Section3 = styled.div`
   padding-top: 226px;
-  height: 265px;
+  height: 491px;
 `;
 
 const IntroSection3Text = styled(InfoSection)`
-  /* bottom: 108px; */
   margin-right: 104px;
   width: 461px;
   float: right;
 `;
 
 const Section4 = styled.div`
+  height: 300px;
   padding-left: 102px;
 `;
 
@@ -226,7 +226,10 @@ const IndexPage = () => (
       </Section3>
       <Section4>
         <IntroSection4Text1
-          title="교통편" hideDivier={false} hideTitle={false}
+          title="교통편"
+          hideDivier={false}
+          hideTitle={false}
+          dividerWidth={461}
           content={`한양대(17017) 일반 10-1, 직행 3100, 3101
 
 한양대입구(17018) 일반 10-1
@@ -236,6 +239,7 @@ const IndexPage = () => (
 한양대게스트하우스(17361,17368) 일반 10-1 직행 3102`} />
         <IntroSection4Text2
           title="장소" hideDivier={false} hideTitle={false}
+          dividerWidth={461}
           content={`한양대학교 에리카 캠퍼스 정문 아고라`}
         />
       </Section4>

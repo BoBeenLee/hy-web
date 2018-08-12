@@ -10,27 +10,26 @@ interface IProps {
     dividerWidth?: number;
 }
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
+const Container = styled.div``;
 
 const Title = styled.div`
     font-size: 32px;
     color: #939eab;
+    margin-bottom: 15px;
 `;
 
 const Divider = styled.div.attrs<{ width: number }>({})`
-    margin-top: 15px;
-    margin-bottom: 21px;
     width: ${({ width }) => `${width}px` || "100%"};
-    height: 1px;
-    background-color: #939eab;
+    border-color: #939eab;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-style: solid;
 `;
 
 const Content = styled.pre`
     font-size: 24px;
     color: #939eab;
+    margin-top: 21px;
 `;
 
 const InfoSection: SFC<IProps> = ({ className, title, content, hideTitle, hideDivier, dividerWidth = 0 }) => {
