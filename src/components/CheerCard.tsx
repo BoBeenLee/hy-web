@@ -1,23 +1,58 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import moment from 'moment';
 
-const Container = styled.div`
-    width: 1008px;
-    height: 94px;
-    border-radius-top-left: 8px;
+type CheerType = "top" | "bottom" | "middle";
+
+interface IProps {
+    className?: string;
+    title: string;
+    createdAt: number;
+    type: CheerType;
+}
+
+const CheerTopCSS = css`
+    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: #939eab;
+    border-bottom-style: dashed;
+`;
+
+const CheerBottomCSS = css`
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+`;
+
+const CheerMiddleCSS = css`
+    border-bottom-width: 1px;
+    border-bottom-color: #939eab;
+    border-bottom-style: dashed;
+`;
+
+const Container = styled.div.attrs<{ type: CheerType }>({})`
+    height: 94px;
     background-color: #fff;
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 23px;
-    border-bottom-width: 1px;
-    border-bottom-color: #939eab;
-    border-bottom-style: dashed;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    ${({ type }) => {
+        switch (type) {
+            case "top":
+                return CheerTopCSS;
+            case "bottom":
+                return CheerBottomCSS;
+            default:
+                return CheerMiddleCSS;
+        }
+    }}
 `;
+
 
 const Title = styled.div`
     font-size: 24px;
@@ -25,32 +60,33 @@ const Title = styled.div`
 `;
 
 const DateView = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
 `;
 
 const Date = styled.div`
-    font-size: 16px;
-    color: #939eab;
-    font-weight: bold;
-    margin-bottom: 3px;
+font-size: 16px;
+color: #939eab;
+font-weight: bold;
+margin-bottom: 3px;
 `;
 
 const Time = styled.div`
 font-size: 16px;
-    color: #939eab;
+color: #939eab;
 `;
 
-class CheerCard extends Component {
+class CheerCard extends Component<IProps> {
     render() {
+        const { className, title, createdAt, type } = this.props;
         return (
-            <Container>
-                <Title>잘봣습니다!</Title>
+            <Container type={type} className={className}>
+                <Title>{title}</Title>
                 <DateView>
-                    <Date>2018.10/15</Date>
-                    <Time>10</Time>
+                    <Date>{moment(createdAt).format("YYYY.MM.DD")}</Date>
+                    <Time>{moment(createdAt).format("HH:mm")}</Time>
                 </DateView >
             </Container >
         );
