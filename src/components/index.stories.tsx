@@ -8,4 +8,4 @@ import { CheerCard, CheerInput, InfoSection } from "../components";
 storiesOf("HY", module)
     .add("with CheerCard", () => <CheerCard />)
     .add("with CheerInput", () => <CheerInput />)
-    .add("with InfoSection", () => <InfoSection hideDivier={false} hideTitle={false} dividerWidth={10} />);
+    .add("with InfoSection", () => <InfoSection hideDivier={false} hideTitle={false} title="Hello" content={"loremlorem"} dividerWidth={10} />);

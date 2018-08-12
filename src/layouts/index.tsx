@@ -35,9 +35,7 @@ const Layout: SFC<IProps> = ({ children }) => (
       ]}
     /> */}
     <Header />
-    <div>
-      {children()}
-    </div>
+    {children()}
   </Container>
 );
 
