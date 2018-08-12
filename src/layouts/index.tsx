@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import styled, { injectGlobal } from "styled-components";
 
 import { Header } from "../components";
-import { NotoSansKRRegular, NotoSansKRMedium } from '../fonts/index';
 
 interface IProps {
   children: any;
@@ -12,7 +11,7 @@ interface IProps {
 injectGlobal`
 @font-face {
   font-family: 'NotoSansKR';
-  src: url(${NotoSansKRRegular});
+  src: url(require('../fonts/NotoSansKR-Regular.otf'));
   font-weight: normal;
   font-style: normal;
 }
