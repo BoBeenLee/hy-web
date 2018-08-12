@@ -1,4 +1,4 @@
-const NotoSansKRRegular = require("./NotoSansKRRegular");
+const NotoSansKRRegular = require("./NotoSansKRRegular.otf");
 const NotoSansKRMedium = require("./NotoSansKR-Medium.otf");
 
 export {
