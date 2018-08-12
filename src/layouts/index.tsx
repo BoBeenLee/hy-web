@@ -11,7 +11,7 @@ interface IProps {
 injectGlobal`
 @font-face {
   font-family: 'NotoSansKR';
-  src: url(require('../fonts/NotoSansKR-Regular.otf'));
+  src: url(${require('../fonts/NotoSansKR-Regular.otf')});
   font-weight: normal;
   font-style: normal;
 }
