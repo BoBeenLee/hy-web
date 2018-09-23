@@ -32,7 +32,6 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
-  background-color: #eee;
 `;
 
 const Layout: SFC<IProps> = ({ children }) => (
