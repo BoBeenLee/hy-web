@@ -6,8 +6,8 @@ interface IProps {
 }
 
 const Container = styled.div`
-    min-width: 970.5px;
-    width: 970.5px
+    min-width: 972px;
+    width: 972px
     height: 253.5px;
 `;
 
@@ -17,6 +17,7 @@ const ProfileImage = styled.img`
     border-radius: 10px;
     box-shadow: 1px 1px 5px #6fc7e2;
     float: left;
+    margin-right: 1px;
 `;
 
 const Title = styled.div`
