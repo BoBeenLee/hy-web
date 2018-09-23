@@ -59,11 +59,11 @@ const Section1ItemView = styled.div`
 const Section1Title = Title.extend`
     display: inline-block;
     width: 65px;
+    margin-right: 20px;
 `;
 
 const Section1Description = Description.extend`
     display: inline-block;
-    padding-left: 20px;
 `;
 
 const Link = styled.a`
