@@ -8,12 +8,29 @@ interface IStates {
 }
 
 const Container = styled.div`
-     width: 100%;
+    width: 100%;
     height: 100%;
     overflow-x: auto;
     overflow-y: auto;
     background-color: #f0f9fc;
 `;
+
+const Content = styled.div`
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+`;
+
+const SideContent = styled.div`
+    display: flex;
+    flex: 1;
+`;
+
+const SideBar = styled.div`
+    width: 340px;
+`;
+
 
 class GalleryPage extends Component<object, IStates> {
     public state = {
@@ -24,6 +41,11 @@ class GalleryPage extends Component<object, IStates> {
         return (
             <Container>
                 <GalleryTopBar onIndexChange={this.onIndexChange} menus={["Brand", "UXUI", "Package", "Character", "Illustration"]} currentIndex={currentIndex} />
+                <Content>
+                    <SideContent>Hello</SideContent>
+                    <SideBar>SideBar</SideBar>
+                </Content>
+
             </Container>
         );
     }

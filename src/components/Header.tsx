@@ -12,6 +12,7 @@ interface IStates {
 const Container = styled.div`
   flex-direction: column;
   width: 60px;
+  min-width: 60px;
   align-items: center;
   background-color: #fff;
   box-shadow: 2px 2px 10px #6fc7e2;
@@ -59,7 +60,7 @@ const MenuActiveCSS = css`
 const MenuIconView = styled.div.attrs<{ active: boolean }>({})`
   display: block;
   width: 100%;
-  height: 18px;
+  height: 24px;
   text-align: center;
   margin-bottom: 69px;
   ${({ active }) => active && MenuActiveCSS};
