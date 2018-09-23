@@ -30,6 +30,8 @@ const Container = styled.div`
 const MainView = styled.div`
   position: fixed;
   width: 100%;
+  height: 100%;
+  display: flex;
   min-height: 1024px;
   background-color: #eee;
 `;
