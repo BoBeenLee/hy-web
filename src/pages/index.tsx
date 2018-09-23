@@ -230,7 +230,7 @@ const IndexPage = () => (
           title="교통편"
           hideDivier={false}
           hideTitle={false}
-          dividerWidth={461}
+          dividerWidth={345.7}
           content={`한양대(17017) 일반 10-1, 직행 3100, 3101
 
 한양대입구(17018) 일반 10-1
@@ -242,14 +242,14 @@ const IndexPage = () => (
         />
         <IntroSection4Text2
           title="장소" hideDivier={false} hideTitle={false}
-          dividerWidth={461}
+          dividerWidth={345.7}
           content={`한양대학교 에리카 캠퍼스 정문 아고라`}
         />
       </Section4>
       <Section5>
         <IntroSection5Text hideTitle={true}
           hideDivier={false}
-          dividerWidth={51}
+          dividerWidth={38}
           content={`4호선 한대앞역 셔틀버스 이용`} />
       </Section5>
       <Intro1Image src={require("./images/intro-1@2x.png")} />
