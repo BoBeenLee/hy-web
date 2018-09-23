@@ -28,7 +28,7 @@ const Container = styled.div`
 `;
 
 const MainView = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   min-height: 1024px;
   background-color: #eee;
