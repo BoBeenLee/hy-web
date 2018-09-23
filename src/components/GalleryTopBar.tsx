@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 interface IProps {
-    currentIndex: number;
+    currentMenuName: string;
     menus: string[];
-    onIndexChange: (index: number) => void;
+    onMenuChange: (name: string) => void;
 }
 
 const Container = styled.div`
@@ -39,14 +39,14 @@ const MenuText = styled.div.attrs<{ isActive: boolean; }>({})`
 
 class GalleryTopBar extends Component<IProps> {
     render() {
-        const { currentIndex, menus, onIndexChange } = this.props;
+        const { currentMenuName, menus, onMenuChange } = this.props;
         return (
             <Container>
                 <Menu>
-                    {_.map(menus, (menu, index) => {
+                    {_.map(menus, (menu) => {
                         return (
                             <MenuItem key={menu}>
-                                <MenuText onClick={_.partial(onIndexChange, index)} isActive={currentIndex === index}>{menu}</MenuText>
+                                <MenuText onClick={_.partial(onMenuChange, menu)} isActive={currentMenuName === menu}>{menu}</MenuText>
                             </MenuItem>
                         )
                     })}
