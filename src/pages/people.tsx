@@ -95,7 +95,8 @@ class PeoplePage extends Component<object, IStates> {
         const graphics = _.filter(peopleData, people => _.some(graphicIds, id => people.id === id));
         const operations = _.filter(peopleData, people => _.some(operationIds, id => people.id === id));
         const peopleArrayExclude = _.filter(peopleData, people => !_.some([...graphics, ...operations], item => people.id === item.id));
-        const chunkArray = _.chunk(peopleArrayExclude, 4);
+        const excludeGiveUp = _.filter(peopleArrayExclude, people => !(people.name === "중도포기"));
+        const chunkArray = _.chunk(excludeGiveUp, 4);
         const { selectedPeople } = this.state;
 
         return (
@@ -122,12 +123,12 @@ class PeoplePage extends Component<object, IStates> {
                             {_.map(graphics, (people, index) => {
                                 const isActive = selectedPeople === people;
                                 return (<PeopleTD key={`graphic${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView 
-                                    isActive={isActive} 
-                                    name={people.name} 
-                                    role={people.role} 
-                                    profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                    hideInfo={false}
+                                    <PeopleCardView
+                                        isActive={isActive}
+                                        name={people.name}
+                                        role={people.role}
+                                        profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                        hideInfo={false}
                                     />
                                 </PeopleTD>);
                             })}
@@ -149,12 +150,12 @@ class PeoplePage extends Component<object, IStates> {
                             {_.map(operations, (people, index) => {
                                 const isActive = selectedPeople === people;
                                 return (<PeopleTD key={`operation${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView 
-                                    isActive={isActive} 
-                                    name={people.name} 
-                                    role={people.role} 
-                                    profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                    hideInfo={false}
+                                    <PeopleCardView
+                                        isActive={isActive}
+                                        name={people.name}
+                                        role={people.role}
+                                        profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                        hideInfo={false}
                                     />
                                 </PeopleTD>);
                             })}
@@ -165,12 +166,12 @@ class PeoplePage extends Component<object, IStates> {
                                     {_.map(chunkItem, people => {
                                         const isActive = selectedPeople === people;
                                         return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                            <PeopleCardView 
-                                            isActive={isActive} 
-                                            name={people.name} 
-                                            role={people.role} 
-                                            profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                            hideInfo={true}
+                                            <PeopleCardView
+                                                isActive={isActive}
+                                                name={people.name}
+                                                role={people.role}
+                                                profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                                hideInfo={true}
                                             />
                                         </PeopleTD>);
                                     })}
