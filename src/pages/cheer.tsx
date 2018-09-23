@@ -7,7 +7,9 @@ import { start, add, DB_NAME, getDatabase } from '../configs/firebase';
 import { CheerInput, CheerCard } from '../components';
 
 interface ICheer {
-    text: string, createdAt: number;
+    key: string;
+    text: string;
+    createdAt: number;
 }
 
 interface IStates {
@@ -84,16 +86,27 @@ class CheerPage extends Component<object, IStates> {
     public async componentDidMount() {
         const database = getDatabase();
         database.ref(`/${DB_NAME}`).on("value", (snapshot) => {
+            const cheerData = snapshot.val();
+            const cheerKeys = _.keys(cheerData);
+
             this.setState({
-                cheers: snapshot.val()
+                cheers: _.reduce(cheerKeys, (res, key) => {
+                    return {
+                        ...res,
+                        [key]: {
+                            key,
+                            ..._.get(cheerData, key)
+                        }
+                    } as ICheer
+                }, {})
             });
         }, (errorObject: any) => {
             console.error("The read failed: " + errorObject.code);
         });
     }
-    render() {
-        const { text, cheers } = this.state;
-        const cheerKeys = _.keys(cheers);
+    public render() {
+        const { text } = this.state;
+        const cheers = this.cheersOrder;
         return (
             <Container>
                 <MainView>
@@ -103,20 +116,23 @@ class CheerPage extends Component<object, IStates> {
                 </MainView>
                 <CheerInputView onChange={this.onTextChange} onSubmit={this.onTextSubmit} value={text} />
                 <CheerView>
-                    {_.map(cheerKeys, (key: string, index: number) => {
-                        const cheer: ICheer = _.get(cheers, key);
-
+                    {_.map(cheers, (cheer: ICheer, index: number) => {
                         if (index === 0) {
-                            return <CheerCardView key={key} title={cheer.text} createdAt={cheer.createdAt} type="top" />;
+                            return <CheerCardView key={cheer.key} title={cheer.text} createdAt={cheer.createdAt} type="top" />;
                         }
-                        if (index === cheerKeys.length - 1) {
-                            return <CheerCardView key={key} title={cheer.text} createdAt={cheer.createdAt} type="bottom" />;
+                        if (index === cheers.length - 1) {
+                            return <CheerCardView key={cheer.key} title={cheer.text} createdAt={cheer.createdAt} type="bottom" />;
                         }
-                        return <CheerCardView key={key} title={cheer.text} createdAt={cheer.createdAt} type="middle" />;
+                        return <CheerCardView key={cheer.key} title={cheer.text} createdAt={cheer.createdAt} type="middle" />;
                     })}
                 </CheerView>
             </Container>
         );
+    }
+
+    private get cheersOrder() {
+        const { cheers } = this.state;
+        return _.orderBy(cheers, ["createdAt"], ["desc"]);
     }
 
     private onTextChange = (event: any) => {
