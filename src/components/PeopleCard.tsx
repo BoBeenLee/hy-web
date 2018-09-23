@@ -4,6 +4,9 @@ import styled from 'styled-components';
 interface IProps {
     className?: string;
     isActive: boolean;
+    name: string;
+    role: string;
+    profileImage: string;
 }
 
 const Container = styled.div.attrs<{ isActive: boolean; }>({})`
@@ -11,7 +14,7 @@ const Container = styled.div.attrs<{ isActive: boolean; }>({})`
     height: 213px;
     border-radius: 8px;
     background-color: white;
-    ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px #6fc7e2;' : ''};
+    ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px 2px #6fc7e2;' : ''};
 `;
 
 const ProfileImage = styled.img`
@@ -20,6 +23,8 @@ const ProfileImage = styled.img`
     height: 150px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    background-size: cover;
+    object-fit: cover;
 `;
 
 const BottomView = styled.div`
@@ -42,14 +47,20 @@ const RoleText = styled.div`
 `;
 
 class PeopleCard extends Component<IProps> {
+    public static defaultProps = {
+        name: "김보민",
+        profileImage: "http://via.placeholder.com/295x200",
+        role: "웹/홍보"
+    }
+
     public render() {
-        const { isActive, className } = this.props;
+        const { isActive, className, name, role, profileImage } = this.props;
         return (
             <Container className={className} isActive={isActive}>
-                <ProfileImage src={"http://via.placeholder.com/295x200"} />
+                <ProfileImage src={profileImage} />
                 <BottomView>
-                    <NameText>김보민</NameText>
-                    <RoleText>웹/홍보</RoleText>
+                    <NameText>{name}</NameText>
+                    <RoleText>{role}</RoleText>
                 </BottomView>
             </Container>
         );

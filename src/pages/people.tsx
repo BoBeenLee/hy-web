@@ -1,7 +1,13 @@
+import _ from 'lodash';
 import React, { Component } from "react";
 import styled from 'styled-components';
 
 import { SelectedPeopleCard, PeopleCard } from '../components';
+import peopleData, { IPeople } from "../data/people";
+
+interface IStates {
+    selectedPeople: IPeople | null;
+}
 
 const Container = styled.div`
     width: 100%;
@@ -65,11 +71,22 @@ const PeopleTD = styled.td`
     padding-bottom: 24.7px;
 `;
 
-class PeoplePage extends Component {
-    render() {
+class PeoplePage extends Component<object, IStates> {
+
+    public state: IStates = {
+        selectedPeople: _.first(peopleData)
+    }
+
+    public render() {
+        const peopleArray = [...peopleData];
+        const graphics = peopleArray.splice(0, 3);
+        const operations = peopleArray.splice(0, 3);
+        const chunkArray = _.chunk(peopleArray, 4);
+        const { selectedPeople } = this.state;
+
         return (
             <Container>
-                <SelectedPeopleCardView />
+                <SelectedPeopleCardView data={selectedPeople} />
                 <PeopleTable>
                     <tbody>
                         <PeopleTR>
@@ -86,9 +103,12 @@ class PeoplePage extends Component {
                                     <PeopleIntroImage src={require("./images/people-1@2x.png")} />
                                 </PeopleIntroView>
                             </PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            {_.map(graphics, (people, index) => {
+                                const isActive = selectedPeople === people;
+                                return (<PeopleTD key={`graphic${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                    <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={people.profileImage} />
+                                </PeopleTD>);
+                            })}
                         </PeopleTR>
                         <PeopleTR>
                             <PeopleTD>
@@ -104,20 +124,35 @@ class PeoplePage extends Component {
                                     <PeopleIntroImage src={require("./images/people-2@2x.png")} />
                                 </PeopleIntroView>
                             </PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={true} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
+                            {_.map(operations, (people, index) => {
+                                const isActive = selectedPeople === people;
+                                return (<PeopleTD key={`operation${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                    <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={people.profileImage} />
+                                </PeopleTD>);
+                            })}
                         </PeopleTR>
-                        <PeopleTR>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                            <PeopleTD><PeopleCardView isActive={false} /></PeopleTD>
-                        </PeopleTR>
+                        {_.map(chunkArray, (chunkItem, index) => {
+                            return (
+                                <PeopleTR key={`tr${index}`}>
+                                    {_.map(chunkItem, people => {
+                                        const isActive = selectedPeople === people;
+                                        return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                            <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={people.profileImage} />
+                                        </PeopleTD>);
+                                    })}
+                                </PeopleTR>
+                            )
+                        })}
                     </tbody>
                 </PeopleTable>
             </Container>
         );
+    }
+
+    private onSelectedPeople = (people: IPeople) => {
+        this.setState({
+            selectedPeople: people
+        });
     }
 }
 

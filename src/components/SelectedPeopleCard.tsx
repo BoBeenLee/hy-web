@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { IPeople } from '../data/people';
+
 interface IProps {
     className?: string;
+    data: IPeople;
 }
 
 const Container = styled.div`
     min-width: 972px;
-    width: 972px
+    width: 972px;
     height: 253.5px;
 `;
 
@@ -37,6 +40,7 @@ const Section1 = styled.div`
     height: 100%;
     padding-top: 30px;
     padding-left: 24px;
+    padding-right: 24px;
     border-left-width: 1px;
     border-left-color: rgba(111, 199, 226, 0.3);
     border-left-style: solid;
@@ -48,7 +52,7 @@ const Section1 = styled.div`
 `;
 
 const Section1ItemView = styled.div`
-    margin-bottom: 18.7px;
+    margin-bottom: 18px;
 `;
 
 const Section1Title = Title.extend`
@@ -61,12 +65,22 @@ const Section1Description = Description.extend`
     padding-left: 20px;
 `;
 
+const Link = styled.a`
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    color: #939eab;
+    line-height: 21.7px;
+    text-decoration: none;
+    cursor: pointer;
+`;
+
 const Section2 = styled.div`
     display: inline-block;
     width: 368px;
     height: 100%;
     padding-top: 30px;
     padding-left: 24px;
+    padding-right: 24px;
     border-radius: 10px;
     background-color: white;
     float: right;
@@ -78,32 +92,32 @@ const Section2Description = Description.extend`
 
 class SelectedPeopleCard extends Component<IProps> {
     public render() {
-        const { className } = this.props;
-
+        const { className, data } = this.props;
+        const { name, subject, email, url, thought } = data;
         return (
             <Container className={className}>
                 <ProfileImage src={"http://via.placeholder.com/312x312"} />
                 <Section1>
                     <Section1ItemView>
                         <Section1Title>Name</Section1Title>
-                        <Section1Description>김보민</Section1Description>
+                        <Section1Description>{name}</Section1Description>
                     </Section1ItemView>
                     <Section1ItemView>
                         <Section1Title>Subject</Section1Title>
-                        <Section1Description>김보민</Section1Description>
+                        <Section1Description>{subject}</Section1Description>
                     </Section1ItemView>
                     <Section1ItemView>
                         <Section1Title>E-mail</Section1Title>
-                        <Section1Description>김보민</Section1Description>
+                        <Section1Description><Link href={`mailto:${email}`}>{email}</Link></Section1Description>
                     </Section1ItemView>
                     <Section1ItemView>
                         <Section1Title>URL</Section1Title>
-                        <Section1Description>김보민</Section1Description>
+                        <Section1Description>{url}</Section1Description>
                     </Section1ItemView>
                 </Section1>
                 <Section2>
                     <Title>Thought</Title>
-                    <Section2Description>졸전 진행해서 너무 좋습니다ㅎㅎㅎㅎ</Section2Description>
+                    <Section2Description>{thought}</Section2Description>
                 </Section2>
             </Container>
         );
