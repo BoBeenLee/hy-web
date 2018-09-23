@@ -22,6 +22,7 @@ const Container = styled.div`
 const HYIconView = styled.div`
   height: 44px;
   text-align: center;
+  cursor: pointer;
 `;
 
 const HYIcon = styled.img`
@@ -103,7 +104,9 @@ class Header extends React.Component<object, IStates> {
     return (
       <Container>
         <HYIconView>
-          <HYIcon src={require("./images/logo@2x.png")} />
+          <Link to={"/"}>
+            <HYIcon src={require("./images/logo@2x.png")} />
+          </Link>
         </HYIconView>
         <MenuView>
           <MenuList>
