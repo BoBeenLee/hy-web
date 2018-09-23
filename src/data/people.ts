@@ -8,7 +8,8 @@ interface IPeople {
     thought: string;
     videoUrl: string;
     videoOrder: string;
-    profileImage: string;
+    profileImage: any;
+    inActiveProfileImage: any;
 }
 
 // tslint:disable:object-literal-sort-keys
@@ -23,7 +24,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p1.jpg"),
+        "inActiveProfileImage": require("./image/people/p1_.jpg")
     },
     {
         "id": "P2",
@@ -35,7 +37,8 @@ const peopleData: IPeople[] = [
         "thought": "벌써 졸업하네용.. 다들 수고많으셨구 졸업축하드려요(~˘▾˘)~",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p2.jpg"),
+        "inActiveProfileImage": require("./image/people/p2_.jpg")
     },
     {
         "id": "P3",
@@ -47,7 +50,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p3.jpg"),
+        "inActiveProfileImage": require("./image/people/p3_.jpg")
     },
     {
         "id": "P4",
@@ -59,7 +63,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p4.jpg"),
+        "inActiveProfileImage": require("./image/people/p4_.jpg")
     },
     {
         "id": "P5",
@@ -71,7 +76,8 @@ const peopleData: IPeople[] = [
         "thought": "소감 정하는게 작품주제 선정보다도 어렵네요 무사히 졸업하게되어서 다행입니다 ٩(๑❛ᴗ❛๑)۶♡",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p5.jpg"),
+        "inActiveProfileImage": require("./image/people/p5_.jpg")
     },
     {
         "id": "P6",
@@ -83,7 +89,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p6.jpg"),
+        "inActiveProfileImage": require("./image/people/p6_.jpg")
     },
     {
         "id": "P7",
@@ -95,7 +102,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p7.jpg"),
+        "inActiveProfileImage": require("./image/people/p7_.jpg")
     },
     {
         "id": "P8",
@@ -107,7 +115,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p8.jpg"),
+        "inActiveProfileImage": require("./image/people/p8_.jpg")
     },
     {
         "id": "P9",
@@ -119,7 +128,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p9.jpg"),
+        "inActiveProfileImage": require("./image/people/p9_.jpg")
     },
     {
         "id": "P10",
@@ -131,7 +141,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p10.jpg"),
+        "inActiveProfileImage": require("./image/people/p10_.jpg")
     },
     {
         "id": "P11",
@@ -143,7 +154,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p11.jpg"),
+        "inActiveProfileImage": require("./image/people/p11_.jpg")
     },
     {
         "id": "P12",
@@ -155,7 +167,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p12.jpg"),
+        "inActiveProfileImage": require("./image/people/p12_.jpg")
     },
     {
         "id": "P13",
@@ -167,7 +180,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p13.jpg"),
+        "inActiveProfileImage": require("./image/people/p13_.jpg")
     },
     {
         "id": "P14",
@@ -179,7 +193,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p14.jpg"),
+        "inActiveProfileImage": require("./image/people/p14_.jpg")
     },
     {
         "id": "P15",
@@ -191,7 +206,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p15.jpg"),
+        "inActiveProfileImage": require("./image/people/p15_.jpg")
     },
     {
         "id": "P16",
@@ -203,7 +219,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p16.jpg"),
+        "inActiveProfileImage": require("./image/people/p16_.jpg")
     },
     {
         "id": "P17",
@@ -215,7 +232,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p17.jpg"),
+        "inActiveProfileImage": require("./image/people/p17_.jpg")
     },
     {
         "id": "P18",
@@ -227,7 +245,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p18.jpg"),
+        "inActiveProfileImage": require("./image/people/p18_.jpg")
     },
     {
         "id": "P19",
@@ -239,7 +258,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p19.jpg"),
+        "inActiveProfileImage": require("./image/people/p19_.jpg")
     },
     {
         "id": "P20",
@@ -251,7 +271,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p20.jpg"),
+        "inActiveProfileImage": require("./image/people/p20_.jpg")
     },
     {
         "id": "P21",
@@ -263,7 +284,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p21.jpg"),
+        "inActiveProfileImage": require("./image/people/p21_.jpg")
     },
     {
         "id": "P22",
@@ -275,7 +297,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p22.jpg"),
+        "inActiveProfileImage": require("./image/people/p22_.jpg")
     },
     {
         "id": "P23",
@@ -287,7 +310,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p23.jpg"),
+        "inActiveProfileImage": require("./image/people/p23_.jpg")
     },
     {
         "id": "P24",
@@ -299,7 +323,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p24.jpg"),
+        "inActiveProfileImage": require("./image/people/p24_.jpg")
     },
     {
         "id": "P25",
@@ -311,7 +336,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p25.jpg"),
+        "inActiveProfileImage": require("./image/people/p25_.jpg")
     },
     {
         "id": "P26",
@@ -323,7 +349,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p26.jpg"),
+        "inActiveProfileImage": require("./image/people/p26_.jpg")
     },
     {
         "id": "P27",
@@ -335,7 +362,8 @@ const peopleData: IPeople[] = [
         "thought": "전 아직도 제가 뭘 해먹고 살지 모르겠어요- 다들 졸업축하합니다 ^^7",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p27.jpg"),
+        "inActiveProfileImage": require("./image/people/p27_.jpg")
     },
     {
         "id": "P28",
@@ -347,7 +375,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p28.jpg"),
+        "inActiveProfileImage": require("./image/people/p28_.jpg")
     },
     {
         "id": "P29",
@@ -359,7 +388,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p29.jpg"),
+        "inActiveProfileImage": require("./image/people/p29_.jpg")
     },
     {
         "id": "P30",
@@ -371,7 +401,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p30.jpg"),
+        "inActiveProfileImage": require("./image/people/p30_.jpg")
     },
     {
         "id": "P31",
@@ -383,7 +414,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p31.jpg"),
+        "inActiveProfileImage": require("./image/people/p31_.jpg")
     },
     {
         "id": "P32",
@@ -395,7 +427,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p32.jpg"),
+        "inActiveProfileImage": require("./image/people/p32_.jpg")
     },
     {
         "id": "P33",
@@ -407,7 +440,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p33.jpg"),
+        "inActiveProfileImage": require("./image/people/p33_.jpg")
     },
     {
         "id": "P34",
@@ -419,7 +453,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p34.jpg"),
+        "inActiveProfileImage": require("./image/people/p34_.jpg")
     },
     {
         "id": "P35",
@@ -431,7 +466,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p35.jpg"),
+        "inActiveProfileImage": require("./image/people/p35_.jpg")
     },
     {
         "id": "P36",
@@ -443,7 +479,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p36.jpg"),
+        "inActiveProfileImage": require("./image/people/p36_.jpg")
     },
     {
         "id": "P37",
@@ -455,7 +492,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p37.jpg"),
+        "inActiveProfileImage": require("./image/people/p37_.jpg")
     },
     {
         "id": "P38",
@@ -467,7 +505,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p38.jpg"),
+        "inActiveProfileImage": require("./image/people/p38_.jpg")
     },
     {
         "id": "P39",
@@ -479,7 +518,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p39.jpg"),
+        "inActiveProfileImage": require("./image/people/p39_.jpg")
     },
     {
         "id": "P40",
@@ -491,7 +531,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p40.jpg"),
+        "inActiveProfileImage": require("./image/people/p40_.jpg")
     },
     {
         "id": "P41",
@@ -503,7 +544,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p41.jpg"),
+        "inActiveProfileImage": require("./image/people/p41_.jpg")
     },
     {
         "id": "P42",
@@ -515,7 +557,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p42.jpg"),
+        "inActiveProfileImage": require("./image/people/p42_.jpg")
     },
     {
         "id": "P43",
@@ -527,7 +570,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p43.jpg"),
+        "inActiveProfileImage": require("./image/people/p43_.jpg")
     },
     {
         "id": "P44",
@@ -539,7 +583,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p44.jpg"),
+        "inActiveProfileImage": require("./image/people/p44_.jpg")
     },
     {
         "id": "P45",
@@ -551,7 +596,8 @@ const peopleData: IPeople[] = [
         "thought": "졸업시켜주세요...",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p45.jpg"),
+        "inActiveProfileImage": require("./image/people/p45_.jpg")
     },
     {
         "id": "P46",
@@ -563,7 +609,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p46.jpg"),
+        "inActiveProfileImage": require("./image/people/p46_.jpg")
     },
     {
         "id": "P47",
@@ -575,7 +622,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p47.jpg"),
+        "inActiveProfileImage": require("./image/people/p47_.jpg")
     },
     {
         "id": "P48",
@@ -587,7 +635,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p48.jpg"),
+        "inActiveProfileImage": require("./image/people/p48_.jpg")
     },
     {
         "id": "P49",
@@ -599,7 +648,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": require("./image/people/p49.jpg"),
+        "inActiveProfileImage": require("./image/people/p49_.jpg")
     }
 ];
 

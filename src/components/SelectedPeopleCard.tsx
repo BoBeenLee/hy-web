@@ -21,6 +21,7 @@ const ProfileImage = styled.img`
     box-shadow: 1px 1px 5px #6fc7e2;
     float: left;
     margin-right: 1px;
+    object-fit: cover;
 `;
 
 const Title = styled.div`
@@ -93,10 +94,10 @@ const Section2Description = Description.extend`
 class SelectedPeopleCard extends Component<IProps> {
     public render() {
         const { className, data } = this.props;
-        const { name, subject, email, url, thought } = data;
+        const { name, subject, email, url, thought, profileImage } = data;
         return (
             <Container className={className}>
-                <ProfileImage src={"http://via.placeholder.com/312x312"} />
+                <ProfileImage src={profileImage} />
                 <Section1>
                     <Section1ItemView>
                         <Section1Title>Name</Section1Title>
