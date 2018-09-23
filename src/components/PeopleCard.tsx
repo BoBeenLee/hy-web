@@ -31,7 +31,8 @@ const BottomView = styled.div`
     border-top-width: 1px;
     border-top-color: #6fc7e2;
     border-top-style: solid;
-    padding-top: 9.7px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     padding-left: 9px;
 `;
 
