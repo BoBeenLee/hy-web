@@ -3,26 +3,6 @@
 
 import * as React from "react";
 import Helmet from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
-
-// tslint:disable-next-line:no-unused-expression
-injectGlobal`
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-#___gatsby {
-  height: 100%;  
-}
-
-html, body {
-  margin: 0px;
-  height: 100%;
-}
-* {
-  font-family: "Noto Sans KR";
-  box-sizing: border-box;
-  font-size: 18px;
-}
-`;
 
 const config = require("../gatsby-config.js");
 
@@ -58,7 +38,7 @@ module.exports = (props: HtmlProps) => {
     content={config.siteMetadata.googleVerification} /> : null;
 
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         {props.headComponents}
         <meta charSet="utf-8" />
