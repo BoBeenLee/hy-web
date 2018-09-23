@@ -1,31 +1,12 @@
 import React, { SFC } from "react";
 import { Helmet } from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
+import styled from "styled-components";
 
 import { Header } from "../components";
 
 interface IProps {
   children: any;
 }
-
-// tslint:disable-next-line:no-unused-expression
-injectGlobal`
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-#___gatsby {
-  height: 100%;  
-}
-
-html, body {
-  margin: 0px;
-  height: 100%;
-}
-* {
-  font-family: "Noto Sans KR";
-  box-sizing: border-box;
-  font-size: 18px;
-}
-`;
 
 const Container = styled.div`
   height: 100%;
