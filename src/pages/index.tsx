@@ -93,7 +93,7 @@ const Main6Image = styled.img`
 const IntroView = styled.div`
   position: relative;
   width: 100%;
-  min-height: 2145px;
+  min-height: 1608.7px;
 `;
 
 const Intro1Image = styled.img`
