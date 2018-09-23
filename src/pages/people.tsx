@@ -122,7 +122,13 @@ class PeoplePage extends Component<object, IStates> {
                             {_.map(graphics, (people, index) => {
                                 const isActive = selectedPeople === people;
                                 return (<PeopleTD key={`graphic${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={isActive ? people.profileImage : people.inActiveProfileImage} />
+                                    <PeopleCardView 
+                                    isActive={isActive} 
+                                    name={people.name} 
+                                    role={people.role} 
+                                    profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                    hideInfo={false}
+                                    />
                                 </PeopleTD>);
                             })}
                         </PeopleTR>
@@ -143,7 +149,13 @@ class PeoplePage extends Component<object, IStates> {
                             {_.map(operations, (people, index) => {
                                 const isActive = selectedPeople === people;
                                 return (<PeopleTD key={`operation${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={isActive ? people.profileImage : people.inActiveProfileImage} />
+                                    <PeopleCardView 
+                                    isActive={isActive} 
+                                    name={people.name} 
+                                    role={people.role} 
+                                    profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                    hideInfo={false}
+                                    />
                                 </PeopleTD>);
                             })}
                         </PeopleTR>
@@ -153,7 +165,13 @@ class PeoplePage extends Component<object, IStates> {
                                     {_.map(chunkItem, people => {
                                         const isActive = selectedPeople === people;
                                         return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                            <PeopleCardView isActive={isActive} name={people.name} role={people.role} profileImage={isActive ? people.profileImage : people.inActiveProfileImage} />
+                                            <PeopleCardView 
+                                            isActive={isActive} 
+                                            name={people.name} 
+                                            role={people.role} 
+                                            profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                            hideInfo={true}
+                                            />
                                         </PeopleTD>);
                                     })}
                                 </PeopleTR>

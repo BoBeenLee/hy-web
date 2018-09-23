@@ -7,11 +7,11 @@ interface IProps {
     name: string;
     role: string;
     profileImage: string;
+    hideInfo: boolean;
 }
 
 const Container = styled.div.attrs<{ isActive: boolean; }>({})`
     width: 220.5px;
-    height: 213px;
     border-radius: 8px;
     background-color: white;
     ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px 2px #6fc7e2;' : ''};
@@ -41,7 +41,7 @@ const NameText = styled.div`
 `;
 
 const RoleText = styled.div`
-    margin-top: 6px;
+    margin-top: 2px;
     font-size: 10.5px;
     color: #939eab;
 `;
@@ -54,14 +54,14 @@ class PeopleCard extends Component<IProps> {
     }
 
     public render() {
-        const { isActive, className, name, role, profileImage } = this.props;
+        const { isActive, className, name, role, profileImage, hideInfo } = this.props;
         return (
             <Container className={className} isActive={isActive}>
                 <ProfileImage src={profileImage} />
-                <BottomView>
+                {hideInfo ? null : <BottomView>
                     <NameText>{name}</NameText>
                     <RoleText>{role}</RoleText>
-                </BottomView>
+                </BottomView>}
             </Container>
         );
     }
