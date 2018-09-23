@@ -16,10 +16,6 @@ injectGlobal`
   height: 100%;  
 }
 
-body {
-  zoom: 75%;
-}
-
 html, body {
   margin: 0px;
   height: 100%;
