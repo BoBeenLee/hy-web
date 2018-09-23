@@ -82,17 +82,20 @@ const PeopleTD = styled.td`
     padding-bottom: 24.7px;
 `;
 
+const graphicIds = ["P2", "P5", "P6"];
+const operationIds = ["P17", "P40", "P48"];
+
 class PeoplePage extends Component<object, IStates> {
 
     public state: IStates = {
-        selectedPeople: _.first(peopleData)
+        selectedPeople: _.first(_.filter(peopleData, people => _.some(graphicIds, id => people.id === id)))
     }
 
     public render() {
-        const peopleArray = [...peopleData];
-        const graphics = peopleArray.splice(0, 3);
-        const operations = peopleArray.splice(0, 3);
-        const chunkArray = _.chunk(peopleArray, 4);
+        const graphics = _.filter(peopleData, people => _.some(graphicIds, id => people.id === id));
+        const operations = _.filter(peopleData, people => _.some(operationIds, id => people.id === id));
+        const peopleArrayExclude = _.filter(peopleData, people => !_.some(graphics, people.id) || !_.some(operations, people.id));
+        const chunkArray = _.chunk(peopleArrayExclude, 4);
         const { selectedPeople } = this.state;
 
         return (
