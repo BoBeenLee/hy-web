@@ -31,6 +31,7 @@ interface IProps {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  background-color: #f0f9fc;
 `;
 
 const Layout: SFC<IProps> = ({ children }) => (
