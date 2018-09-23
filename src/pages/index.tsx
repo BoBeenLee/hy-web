@@ -117,6 +117,10 @@ const IntroSection1Text = styled(InfoSection)`
 `;
 
 const Section2 = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
   padding-top: 45px;
   padding-left: 42px;
 `;
@@ -131,6 +135,7 @@ const IntroSection2Image2 = styled.img`
   width: 332px;
   height: 456px;
   margin-left: 18.7px;
+  margin-right: 130px;
   box-shadow: 2px 2px 10px #6fc7e2;
 `;
 
