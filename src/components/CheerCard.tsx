@@ -31,13 +31,14 @@ const CheerMiddleCSS = css`
 `;
 
 const Container = styled.div.attrs<{ type: CheerType }>({})`
-    height: 73.5px;
     background-color: #fff;
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
     padding-left: 29px;
     padding-right: 29px;
 
