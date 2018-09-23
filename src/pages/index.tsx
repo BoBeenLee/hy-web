@@ -220,7 +220,7 @@ const IndexPage = () => (
         <IntroSection3Text
           hideTitle={false}
           hideDivier={false}
-          dividerWidth={461}
+          dividerWidth={345.7}
           title={`전시 일정`}
           content={`10.11 Thu - 10.16 Tue
 10:00a.m. - 20 :00p.m.`} />
