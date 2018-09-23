@@ -94,7 +94,7 @@ class PeoplePage extends Component<object, IStates> {
     public render() {
         const graphics = _.filter(peopleData, people => _.some(graphicIds, id => people.id === id));
         const operations = _.filter(peopleData, people => _.some(operationIds, id => people.id === id));
-        const peopleArrayExclude = _.filter(peopleData, people => !_.some(graphics, people.id) || !_.some(operations, people.id));
+        const peopleArrayExclude = _.filter(peopleData, people => !_.some([...graphics, ...operations], item => people.id === item.id));
         const chunkArray = _.chunk(peopleArrayExclude, 4);
         const { selectedPeople } = this.state;
 
