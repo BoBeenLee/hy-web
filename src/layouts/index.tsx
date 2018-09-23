@@ -31,6 +31,8 @@ interface IProps {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  flex: 1;
+  height: 100%;
   background-color: #f0f9fc;
 `;
 

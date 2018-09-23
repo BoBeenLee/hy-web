@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import styled from 'styled-components';
 
 import { GalleryTopBar } from '../components';
+import galleryData, { IGallery } from "../data/gallery";
 
 interface IStates {
     currentMenuName: string;
@@ -49,67 +50,72 @@ const Thumbnail = styled.img.attrs<{ isActive: boolean; }>({})`
 `;
 
 // tslint:disable:object-literal-sort-keys
-const data: any = {
+const data: { [key: string]: IGallery[] } = {
     "Brand": [
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P1",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         },
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P2",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
-        },
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
-        },
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
-        },
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
-        },
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         }
     ],
     "UXUI": [
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
-        },
-        {
-            mainUrl: "https://via.placeholder.com/300x300",
-            thumbnail: "https://via.placeholder.com/300x300",
-        }
+        ...galleryData
     ],
     "Package": [
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P3",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         },
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P4",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         }
     ],
     "Character": [
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P5",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         }
     ],
     "Illustration": [
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P6",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         },
         {
-            mainUrl: "https://via.placeholder.com/300x300",
+            id: "P7",
+            role: "UXUI",
             thumbnail: "https://via.placeholder.com/300x300",
+            images: [
+                "https://via.placeholder.com/300x300"
+            ]
         }
     ],
 }
