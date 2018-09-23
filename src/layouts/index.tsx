@@ -8,6 +8,7 @@ interface IProps {
   children: any;
 }
 
+// tslint:disable-next-line:no-unused-expression
 injectGlobal`
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
@@ -21,6 +22,7 @@ html, body {
 * {
   font-family: "Noto Sans KR";
   box-sizing: border-box;
+  font-size: 24px;
 }
 `;
 
