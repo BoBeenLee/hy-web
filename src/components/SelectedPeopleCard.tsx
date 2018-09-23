@@ -102,7 +102,7 @@ class SelectedPeopleCard extends Component<IProps> {
                 </Section1>
                 <Section2>
                     <Title>Thought</Title>
-                    <Section2Description>졸전 진행해서 ㅈ같았고 두번다신 보지말자.</Section2Description>
+                    <Section2Description>졸전 진행해서 너무 좋습니다ㅎㅎㅎㅎ</Section2Description>
                 </Section2>
             </Container>
         );

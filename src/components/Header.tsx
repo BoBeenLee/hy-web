@@ -124,11 +124,11 @@ class Header extends React.Component<object, IStates> {
   }
 
 
-  private isActive = (index: number, match: match<any>, location: H.Location) => {
-    if (_.isEmpty(match)) {
+  private isActive = (index: number, linkMatch: match<any>, location: H.Location) => {
+    if (_.isEmpty(linkMatch)) {
       return false;
     }
-    if (match.url === location.pathname) {
+    if (linkMatch.url === location.pathname) {
       if (this.state.currentIndex !== index) {
         this.setState({
           currentIndex: index
