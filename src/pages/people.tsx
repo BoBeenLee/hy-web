@@ -6,9 +6,9 @@ import { SelectedPeopleCard, PeopleCard } from '../components';
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    padding-top: 24px;
-    padding-left: 29px;
-    padding-right: 35px;
+    padding-top: 18px;
+    padding-left: 21.7px;
+    padding-right: 26px;
     overflow-x: auto;
     overflow-y: auto;
     background-color: #f0f9fc;
@@ -20,25 +20,25 @@ const PeopleCardView = styled(PeopleCard)``;
 
 const PeopleIntroView = styled.div`
     position: relative;
-    width: 294px;
-    height: 285px;
+    width: 220.5px;
+    height: 213.7px;
 `;
 
 const PeopleIntroName = styled.div`
     position: absolute;
-    top: 17px;
-    left: 18px;
-    font-size: 42px;
-    line-height: 50px;
+    top: 12.7px;
+    left: 13.5px;
+    font-size: 31.5px;
+    line-height: 37.5px;
     color: white;
     z-index: 1;
 `;
 
 const PeopleIntroRole = styled.div`
     position: absolute;
-    left: 18px;
-    bottom: 68px;
-    font-size: 22px;
+    left: 13.5px;
+    bottom: 51px;
+    font-size: 16.5px;
     color: white;
     z-index: 1;
 `;
@@ -52,17 +52,17 @@ const PeopleIntroImage = styled.img`
 `;
 
 const PeopleTable = styled.table`
-    min-width: 1294px;
-    width: 1294px;
+    min-width: 970.5px;
+    width: 970.5px;
     border: 0px;
-    margin-top: 40px;
+    margin-top: 30px;
 `;
 
 const PeopleTR = styled.tr``;
 
 const PeopleTD = styled.td`
-    padding-right: 35px;
-    padding-bottom: 33px;
+    padding-right: 26px;
+    padding-bottom: 24.7px;
 `;
 
 class PeoplePage extends Component {

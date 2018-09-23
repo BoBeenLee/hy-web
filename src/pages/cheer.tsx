@@ -37,7 +37,7 @@ const Main1Image = styled.img`
   top: 0;
   left: 0;
   z-index: 1;
-  width: 1075px;
+  width: 806px;
 `;
 
 const Main2Image = styled.img`
@@ -45,7 +45,7 @@ const Main2Image = styled.img`
   bottom: 0;
   right: 0;
   z-index: 2;
-  width: 1303px;
+  width: 977px;
 `;
 
 const Main3Image = styled.img`
@@ -58,7 +58,7 @@ const Main3Image = styled.img`
 
 const CheerInputView = styled(CheerInput)`
     width: 70%;
-    margin: 227px auto 54px auto;
+    margin: 170px auto 40.5px auto;
     z-index: 10;
 `;
 

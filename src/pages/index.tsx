@@ -25,7 +25,7 @@ const Main1Image = styled.img`
   top: 0;
   left: 0;
   z-index: 1;
-  width: 1075px;
+  width: 806px;
 `;
 
 const Main2Image = styled.img`
@@ -33,7 +33,7 @@ const Main2Image = styled.img`
   bottom: 0;
   right: 0;
   z-index: 2;
-  width: 1303px;
+  width: 977px;
 `;
 
 const Main3Image = styled.img`
@@ -48,47 +48,46 @@ const Main4ImageView = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 234px;
-  height: 236px;
-  margin-left: -400px;
-  margin-top: 50px;
+  width: 175.5px;
+  height: 177px;
+  margin-left: -300px;
+  margin-top: 37.5px;
   z-index: 3;
 `;
 
 const Main4Image = styled.img`
-  width: 234px;
-  height: 236px;
+  width: 175.5px;
+  height: 177px;
 `;
 
 const Main5ImageView = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 142px;
-  height: 142px;
-  margin-top: -250px;
-    margin-left: 150px;
+  width: 106.5px;
+  height: 106.5px;
+  margin-top: -187.5px;
+  margin-left: 112.5px;
   z-index: 4;
 `;
 
 const Main5Image = styled.img`
-  width: 142px;
-  height: 142px;
+  width: 106.5px;
+  height: 106.5px;
 `;
 
 const Main6ImageView = styled.div`
   position: absolute;
-  top: 324px;
+  top: 243px;
   left: 50%;
-  width: 213px;
-  height: 317px;
-  margin-left: -106px;
+  width: 159.7px;
+  height: 237.7px;
+  margin-left: -79.5px;
   z-index: 10;
 `;
 
 const Main6Image = styled.img`
-  width: 213px;
-  height: 317px;
+  width: 159.7px;
 `;
 
 const IntroView = styled.div`
@@ -99,93 +98,93 @@ const IntroView = styled.div`
 
 const Intro1Image = styled.img`
   position: absolute;
-  top: 249px;
-  right: 49px;
-  width: 213px;
-  height: 375px;
+  top: 186.7px;
+  right: 36.7px;
+  width: 159.7px;
+  height: 281px;
 `;
 
 const Section1 = styled.div`
   position: relative;
-  height: 386px;
+  height: 289.5px;
 `;
 
 const IntroSection1Text = styled(InfoSection)`
   position: absolute;
   bottom: 0;
-  right: 68px;
-  width: 500px;
+  right: 51px;
+  width: 375px;
 `;
 
 const Section2 = styled.div`
-  padding-top: 60px;
-  padding-left: 57px;
+  padding-top: 45px;
+  padding-left: 42px;
 `;
 
 const IntroSection2Image1 = styled.img`
-width: 443px;
-height: 608px;
-    box-shadow: 2px 2px 10px #6fc7e2;
+  width: 332px;
+  height: 456px;
+  box-shadow: 2px 2px 10px #6fc7e2;
 `;
 
 const IntroSection2Image2 = styled.img`
-width: 443px;
-height: 608px;
-margin-left: 25px;
-    box-shadow: 2px 2px 10px #6fc7e2;
+  width: 332px;
+  height: 456px;
+  margin-left: 18.7px;
+  box-shadow: 2px 2px 10px #6fc7e2;
 `;
 
 const Section3 = styled.div`
-  padding-top: 226px;
-  height: 491px;
+  padding-top: 169.5px;
+  height: 368px;
 `;
 
 const IntroSection3Text = styled(InfoSection)`
-  margin-right: 104px;
-  width: 461px;
+  margin-right: 78px;
+  width: 345.7px;
   float: right;
 `;
 
 const Section4 = styled.div`
-  height: 300px;
-  padding-left: 102px;
+  height: 225px;
+  padding-left: 76.5px;
 `;
 
 const IntroSection4ContentCSS = css`
-  line-height: 24px;
+  line-height: 18px;
 `;
 
 const IntroSection4Text1 = styled(InfoSection)`
   display: inline-block;
-  width: 461px;
+  width: 345.7px;
 `;
 
 const IntroSection4Text2 = styled(InfoSection)`
   display: inline-block;
-  width: 461px;
+  width: 345.7px;
   height: 100%;
-  margin-right: 101px;
+  margin-right: 75.7px;
   float: right;
 `;
 
 const Section5 = styled.div`
-  padding-left: 102px;
+  padding-left: 76.5px;
 `;
 
 const IntroSection5Text = styled(InfoSection)``;
 
 const Intro1BottmImageView = styled.div`
-   position: absolute;
-  bottom: 361px;
+  position: absolute;
+  bottom: 270.75px;
   left: 50%;
-  width: 213px;
-  height: 375px;
-  margin-left: -106px;
+  width: 159.7px;
+  height: 281px;
+  margin-left: -79.5px;
 `;
 
 const Intro1BottomImage = styled.img`
-  width: 213px;
-  height: 375px;
+  width: 159.7px;
+  height: 281px;
 `;
 
 const IndexPage = () => (

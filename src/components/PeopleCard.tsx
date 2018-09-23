@@ -7,8 +7,8 @@ interface IProps {
 }
 
 const Container = styled.div.attrs<{ isActive: boolean; }>({})`
-    width: 294px;
-    height: 284px;
+    width: 220.5px;
+    height: 213px;
     border-radius: 8px;
     background-color: white;
     ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px #6fc7e2;' : ''};
@@ -17,7 +17,7 @@ const Container = styled.div.attrs<{ isActive: boolean; }>({})`
 const ProfileImage = styled.img`
     display: block;
     width: 100%;
-    height: 200px;
+    height: 150px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 `;
@@ -26,18 +26,18 @@ const BottomView = styled.div`
     border-top-width: 1px;
     border-top-color: #6fc7e2;
     border-top-style: solid;
-    padding-top: 13px;
-    padding-left: 12px;
+    padding-top: 9.7px;
+    padding-left: 9px;
 `;
 
 const NameText = styled.div`
-    font-size: 23px;
+    font-size: 17px;
     color: #323c47;
 `;
 
 const RoleText = styled.div`
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 6px;
+    font-size: 10.5px;
     color: #939eab;
 `;
 

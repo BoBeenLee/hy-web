@@ -9,8 +9,8 @@ interface IProps {
 }
 
 const Container = styled.div`
-    height: 82px;
-    padding-left: 52px;
+    height: 61.5px;
+    padding-left: 39px;
     background-color: white;
     box-shadow: 2px 2px 10px rgba(81, 162, 187, 0.5);
 `;
@@ -23,14 +23,14 @@ const Menu = styled.ul`
 `;
 
 const MenuItem = styled.li`
-    padding-top: 31px;
-    padding-bottom: 31px;
-    margin-right: 64px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    margin-right: 48px;
     float: left;
 `;
 
 const MenuText = styled.div.attrs<{ isActive: boolean; }>({})`
-    font-size: 16px;
+    font-size: 12px;
     color: #637280;
     opacity: ${({ isActive }) => isActive ? '1' : '0.3'};
     cursor: pointer;

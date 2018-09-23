@@ -6,13 +6,13 @@ interface IProps {
 }
 
 const Container = styled.div`
-    min-width: 1294px;
-    width: 1294px
-    height: 338px;
+    min-width: 970.5px;
+    width: 970.5px
+    height: 253.5px;
 `;
 
 const ProfileImage = styled.img`
-    width: 312px;
+    width: 234px;
     height: 100%;
     border-radius: 10px;
     box-shadow: 1px 1px 5px #6fc7e2;
@@ -20,22 +20,22 @@ const ProfileImage = styled.img`
 `;
 
 const Title = styled.div`
-    font-size: 24px;
+    font-size: 18px;
     color: #939eab;
 `;
 
 const Description = styled.div`
-    font-size: 16px;
+    font-size: 12px;
     color: #939eab;
-    line-height: 29px;
+    line-height: 21.7px;
 `;
 
 const Section1 = styled.div`
     display: inline-block;
-    width: 491px;
+    width: 368px;
     height: 100%;
-    padding-top: 40px;
-    padding-left: 32px;
+    padding-top: 30px;
+    padding-left: 24px;
     border-left-width: 1px;
     border-left-color: rgba(111, 199, 226, 0.3);
     border-left-style: solid;
@@ -47,32 +47,32 @@ const Section1 = styled.div`
 `;
 
 const Section1ItemView = styled.div`
-    margin-bottom: 25px;
+    margin-bottom: 18.7px;
 `;
 
 const Section1Title = Title.extend`
     display: inline-block;
-    width: 87px;
+    width: 65px;
 `;
 
 const Section1Description = Description.extend`
     display: inline-block;
-    padding-left: 27px;
+    padding-left: 20px;
 `;
 
 const Section2 = styled.div`
     display: inline-block;
-    width: 491px;
+    width: 368px;
     height: 100%;
-    padding-top: 40px;
-    padding-left: 32px;
+    padding-top: 30px;
+    padding-left: 24px;
     border-radius: 10px;
     background-color: white;
     float: right;
 `;
 
 const Section2Description = Description.extend`
-    margin-top: 17px;
+    margin-top: 12.7px;
 `;
 
 class SelectedPeopleCard extends Component<IProps> {

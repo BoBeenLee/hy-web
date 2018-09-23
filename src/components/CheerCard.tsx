@@ -31,15 +31,15 @@ const CheerMiddleCSS = css`
 `;
 
 const Container = styled.div.attrs<{ type: CheerType }>({})`
-    height: 98px;
+    height: 73.5px;
     background-color: #fff;
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 39px;
-    padding-right: 39px;
+    padding-left: 29px;
+    padding-right: 29px;
 
     ${({ type }) => {
         switch (type) {
@@ -55,27 +55,27 @@ const Container = styled.div.attrs<{ type: CheerType }>({})`
 
 
 const Title = styled.div`
-    font-size: 24px;
+    font-size: 18px;
     color: #939eab;
 `;
 
 const DateView = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 `;
 
 const Date = styled.div`
-font-size: 16px;
-color: #939eab;
-font-weight: bold;
-margin-bottom: 3px;
+    font-size: 12px;
+    color: #939eab;
+    font-weight: bold;
+    margin-bottom: 2px;
 `;
 
 const Time = styled.div`
-font-size: 16px;
-color: #939eab;
+    font-size: 12px;
+    color: #939eab;
 `;
 
 class CheerCard extends Component<IProps> {

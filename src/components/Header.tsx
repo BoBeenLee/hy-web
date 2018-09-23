@@ -11,7 +11,7 @@ interface IStates {
 
 const Container = styled.div`
   flex-direction: column;
-  width: 80px;
+  width: 60px;
   align-items: center;
   background-color: #fff;
   box-shadow: 2px 2px 10px #6fc7e2;
@@ -19,18 +19,18 @@ const Container = styled.div`
 `;
 
 const HYIconView = styled.div`
-  height: 59px;
+  height: 44px;
   text-align: center;
 `;
 
 const HYIcon = styled.img`
-  width: 34px;
-  height: 35px;
-  margin-top: 25px;
+  width: 25.5px;
+  height: 26px;
+  margin-top: 18.7px;
 `;
 
 const MenuView = styled.div`
-  padding-top: 263px;
+  padding-top: 197px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -59,15 +59,15 @@ const MenuActiveCSS = css`
 const MenuIconView = styled.div.attrs<{ active: boolean }>({})`
   display: block;
   width: 100%;
-  height: 24px;
+  height: 18px;
   text-align: center;
-  margin-bottom: 92px;
+  margin-bottom: 69px;
   ${({ active }) => active && MenuActiveCSS};
 `;
 
 const MenuIcon = styled.img`
-  width: 22px;
-  height: 24px;
+  width: 16.5px;
+  height: 18px;
 `;
 
 const menus: any = [{

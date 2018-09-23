@@ -14,9 +14,9 @@ interface IProps {
 const Container = styled.div``;
 
 const Title = styled.div`
-    font-size: 32px;
+    font-size: 24px;
     color: #939eab;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 `;
 
 const Divider = styled.div.attrs<{ width: number }>({})`
@@ -28,10 +28,10 @@ const Divider = styled.div.attrs<{ width: number }>({})`
 `;
 
 const Content = styled.pre.attrs<{ contentCSS?: any }>({})`
-    font-size: 24px;
+    font-size: 18px;
     color: #939eab;
-    line-height: 39px;
-    margin-top: 21px;
+    line-height: 29px;
+    margin-top: 15.7px;
     ${({ contentCSS }) => contentCSS};
 `;
 

@@ -10,22 +10,22 @@ interface IProps {
 
 const Container = styled.form`
     text-align: center;
-    width: 100px;
-    height: 80px;
+    width: 75px;
+    height: 60px;
     border-radius: 8px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    padding-left: 39px;
-    padding-right: 39px;
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+    padding-left: 29px;
+    padding-right: 29px;
     box-shadow: 2px 2px 10px #6fc7e2;
     background-color: white;
 `;
 
 const Input = styled.input`
-    font-size: 24px;
+    font-size: 18px;
     color: #dadada;
     width: 100%;
-    height: 36px;
+    height: 27px;
     border-width: 0px;
     ::placeholder {
         color: #dadada;

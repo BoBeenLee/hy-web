@@ -23,7 +23,7 @@ html, body {
 * {
   font-family: "Noto Sans KR";
   box-sizing: border-box;
-  font-size: 24px;
+  font-size: 18px;
 }
 `;
 
