@@ -43,7 +43,7 @@ module.exports = (props: HtmlProps) => {
         {props.headComponents}
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.75, minimum-scale=0.75, maximum-scale=0.75, user-scalable=no" />
         <meta name="keywords"
           content="hy" />
         <meta name="description"
