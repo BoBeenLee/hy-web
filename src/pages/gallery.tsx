@@ -23,7 +23,7 @@ class GalleryPage extends Component<object, IStates> {
         const { currentIndex } = this.state;
         return (
             <Container>
-                <GalleryTopBar onIndexChange={this.onIndexChange} menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentIndex={currentIndex} />
+                <GalleryTopBar onIndexChange={this.onIndexChange} menus={["Brand", "UXUI", "Package", "Character", "Illustration"]} currentIndex={currentIndex} />
             </Container>
         );
     }
