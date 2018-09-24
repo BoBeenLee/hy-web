@@ -41,7 +41,6 @@ const Layout: SFC<IProps> = ({ children }) => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>HY</title>
-      <meta name="description" content="Helmet application" />
     </Helmet>
     <Header />
     {children()}

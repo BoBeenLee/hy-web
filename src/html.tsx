@@ -48,6 +48,7 @@ module.exports = (props: HtmlProps) => {
           content="hy" />
         <meta name="description"
           content="hy" />
+        <link rel="shortcut icon" href={require("./favicon.png")} type="image/png" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}
