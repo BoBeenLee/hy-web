@@ -133,7 +133,7 @@ const data: { [key: string]: IGallery[] } = {
 class GalleryPage extends Component<object, IStates> {
     public state: IStates = {
         currentMenuName: "Brand",
-        selectedGallery: null
+        selectedGallery: _.first(data.Brand)
     };
     public render() {
         const { currentMenuName, selectedGallery } = this.state;

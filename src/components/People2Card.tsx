@@ -34,9 +34,10 @@ const NameText = styled.div`
 `;
 
 const RoleText = styled.div`
-    margin-top: 2px;
     font-size: 12px;
+    font-weight: lighter;
     color: #637280;
+    margin-top: 2px;
 `;
 
 class People2Card extends Component<IProps> {
