@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React, { Component } from "react";
 import styled from 'styled-components';
 
-import { GalleryTopBar } from '../components';
+import { GalleryTopBar, People2Card } from '../components';
 import galleryData, { IGallery } from "../data/gallery";
+import peopleData, { IPeople } from "../data/people";
 
 interface IStates {
     currentMenuName: string;
@@ -44,6 +45,10 @@ const SideBar = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     overflow: auto;
+`;
+
+const Profile = styled(People2Card)`
+    margin-bottom: 24px;
 `;
 
 const Thumbnail = styled.img.attrs<{ isActive: boolean; }>({})`
@@ -133,6 +138,7 @@ class GalleryPage extends Component<object, IStates> {
     public render() {
         const { currentMenuName, selectedGallery } = this.state;
         const currentData = data[currentMenuName];
+        const selectedPeople: IPeople = _.find(peopleData, people => people.id === _.get(selectedGallery, "id"));
 
         return (
             <Container>
@@ -144,6 +150,11 @@ class GalleryPage extends Component<object, IStates> {
                         }) : null}
                     </SideContent>
                     <SideBar>
+                        {selectedPeople ? <Profile
+                            name={selectedPeople.name}
+                            role={selectedPeople.role}
+                            profileImage={selectedPeople.profileImage}
+                        /> : null}
                         {_.map(currentData, item => {
                             const isActive = selectedGallery === item;
                             return <Thumbnail isActive={isActive}
@@ -159,7 +170,7 @@ class GalleryPage extends Component<object, IStates> {
     private onIndexChange = (name: string) => {
         this.setState({
             currentMenuName: name,
-            selectedGallery: null
+            selectedGallery: _.first(data[name])
         });
     }
 
