@@ -12,20 +12,16 @@ interface IStates {
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    overflow-x: auto;
-    overflow-y: auto;
     background-color: #f0f9fc;
 `;
 
 const Header = styled.div`
-    position: fixed;
     width: 100%;
     padding-top: 18px;
     margin-left: 21.7px;
     margin-right: 26px;
     padding-bottom: 18px;
     background-color: #f0f9fc;
-    z-index: 99;
 `;
 
 const SelectedPeopleCardView = styled(SelectedPeopleCard)`
@@ -66,11 +62,15 @@ const PeopleIntroImage = styled.img`
     height: 100%;
 `;
 
+const PeopleTableView = styled.div`
+    height: 423px;
+    overflow-y: auto;
+`;
+
 const PeopleTable = styled.table`
     min-width: 970.5px;
     width: 970.5px;
     border: 0px;
-    padding-top: 290px;
     padding-left: 21.7px;
     padding-right: 26px;
 `;
@@ -104,82 +104,84 @@ class PeoplePage extends Component<object, IStates> {
                 <Header>
                     <SelectedPeopleCardView data={selectedPeople} />
                 </Header>
-                <PeopleTable>
-                    <tbody>
-                        <PeopleTR>
-                            <PeopleTD>
-                                <PeopleIntroView>
-                                    <PeopleIntroName>
-                                        졸업<br />
-                                        준비<br />
-                                        위원회
+                <PeopleTableView>
+                    <PeopleTable>
+                        <tbody>
+                            <PeopleTR>
+                                <PeopleTD>
+                                    <PeopleIntroView>
+                                        <PeopleIntroName>
+                                            졸업<br />
+                                            준비<br />
+                                            위원회
                                 </PeopleIntroName>
-                                    <PeopleIntroRole>
-                                        _그래픽팀
+                                        <PeopleIntroRole>
+                                            _그래픽팀
                                 </PeopleIntroRole>
-                                    <PeopleIntroImage src={require("./images/people-1@2x.png")} />
-                                </PeopleIntroView>
-                            </PeopleTD>
-                            {_.map(graphics, (people, index) => {
-                                const isActive = selectedPeople === people;
-                                return (<PeopleTD key={`graphic${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView
-                                        isActive={isActive}
-                                        name={people.name}
-                                        role={people.role}
-                                        profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                        hideInfo={false}
-                                    />
-                                </PeopleTD>);
-                            })}
-                        </PeopleTR>
-                        <PeopleTR>
-                            <PeopleTD>
-                                <PeopleIntroView>
-                                    <PeopleIntroName>
-                                        졸업<br />
-                                        준비<br />
-                                        위원회
+                                        <PeopleIntroImage src={require("./images/people-1@2x.png")} />
+                                    </PeopleIntroView>
+                                </PeopleTD>
+                                {_.map(graphics, (people, index) => {
+                                    const isActive = selectedPeople === people;
+                                    return (<PeopleTD key={`graphic${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                        <PeopleCardView
+                                            isActive={isActive}
+                                            name={people.name}
+                                            role={people.role}
+                                            profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                            hideInfo={false}
+                                        />
+                                    </PeopleTD>);
+                                })}
+                            </PeopleTR>
+                            <PeopleTR>
+                                <PeopleTD>
+                                    <PeopleIntroView>
+                                        <PeopleIntroName>
+                                            졸업<br />
+                                            준비<br />
+                                            위원회
                                 </PeopleIntroName>
-                                    <PeopleIntroRole>
-                                        _운영팀
+                                        <PeopleIntroRole>
+                                            _운영팀
                                 </PeopleIntroRole>
-                                    <PeopleIntroImage src={require("./images/people-2@2x.png")} />
-                                </PeopleIntroView>
-                            </PeopleTD>
-                            {_.map(operations, (people, index) => {
-                                const isActive = selectedPeople === people;
-                                return (<PeopleTD key={`operation${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                    <PeopleCardView
-                                        isActive={isActive}
-                                        name={people.name}
-                                        role={people.role}
-                                        profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                        hideInfo={false}
-                                    />
-                                </PeopleTD>);
+                                        <PeopleIntroImage src={require("./images/people-2@2x.png")} />
+                                    </PeopleIntroView>
+                                </PeopleTD>
+                                {_.map(operations, (people, index) => {
+                                    const isActive = selectedPeople === people;
+                                    return (<PeopleTD key={`operation${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                        <PeopleCardView
+                                            isActive={isActive}
+                                            name={people.name}
+                                            role={people.role}
+                                            profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                            hideInfo={false}
+                                        />
+                                    </PeopleTD>);
+                                })}
+                            </PeopleTR>
+                            {_.map(chunkArray, (chunkItem, index) => {
+                                return (
+                                    <PeopleTR key={`tr${index}`}>
+                                        {_.map(chunkItem, people => {
+                                            const isActive = selectedPeople === people;
+                                            return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                                <PeopleCardView
+                                                    isActive={isActive}
+                                                    name={people.name}
+                                                    role={people.role}
+                                                    profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
+                                                    hideInfo={true}
+                                                />
+                                            </PeopleTD>);
+                                        })}
+                                    </PeopleTR>
+                                )
                             })}
-                        </PeopleTR>
-                        {_.map(chunkArray, (chunkItem, index) => {
-                            return (
-                                <PeopleTR key={`tr${index}`}>
-                                    {_.map(chunkItem, people => {
-                                        const isActive = selectedPeople === people;
-                                        return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
-                                            <PeopleCardView
-                                                isActive={isActive}
-                                                name={people.name}
-                                                role={people.role}
-                                                profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
-                                                hideInfo={true}
-                                            />
-                                        </PeopleTD>);
-                                    })}
-                                </PeopleTR>
-                            )
-                        })}
-                    </tbody>
-                </PeopleTable>
+                        </tbody>
+                    </PeopleTable>
+                </PeopleTableView>
             </Container>
         );
     }

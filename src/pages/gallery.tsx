@@ -7,6 +7,7 @@ import galleryData, { IGallery } from "../data/gallery";
 
 interface IStates {
     currentMenuName: string;
+    selectedGallery: IGallery | null;
 }
 
 const Container = styled.div`
@@ -26,9 +27,13 @@ const Content = styled.div`
 const SideContent = styled.div`
     display: flex;
     flex: 1;
+    flex-direction: column;
     background-color: #eee;
-    justify-content: center;
-    align-items: center;
+    overflow-y: auto;
+`;
+
+const Image = styled.img`
+    width: 100%;
 `;
 
 const SideBar = styled.div`
@@ -122,20 +127,28 @@ const data: { [key: string]: IGallery[] } = {
 
 class GalleryPage extends Component<object, IStates> {
     public state: IStates = {
-        currentMenuName: "Brand"
+        currentMenuName: "Brand",
+        selectedGallery: null
     };
     public render() {
-        const { currentMenuName } = this.state;
+        const { currentMenuName, selectedGallery } = this.state;
         const currentData = data[currentMenuName];
 
         return (
             <Container>
                 <GalleryTopBar onMenuChange={this.onIndexChange} menus={["Brand", "UXUI", "Package", "Character", "Illustration"]} currentMenuName={currentMenuName} />
                 <Content>
-                    <SideContent>Hello</SideContent>
+                    <SideContent>
+                        {selectedGallery ? _.map(selectedGallery.images, image => {
+                            return <Image src={image} />
+                        }) : null}
+                    </SideContent>
                     <SideBar>
                         {_.map(currentData, item => {
-                            return <Thumbnail isActive={true} src={item.thumbnail} />
+                            const isActive = selectedGallery === item;
+                            return <Thumbnail isActive={isActive}
+                                src={item.thumbnail}
+                                onClick={_.partial(this.onSelectedGallery, item)} />
                         })}
                     </SideBar>
                 </Content>
@@ -145,7 +158,14 @@ class GalleryPage extends Component<object, IStates> {
 
     private onIndexChange = (name: string) => {
         this.setState({
-            currentMenuName: name
+            currentMenuName: name,
+            selectedGallery: null
+        });
+    }
+
+    private onSelectedGallery = (gallery: IGallery) => {
+        this.setState({
+            selectedGallery: gallery
         });
     }
 }
