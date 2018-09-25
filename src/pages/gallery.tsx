@@ -152,7 +152,7 @@ class GalleryPage extends Component<object, IStates> {
                     <SideBar>
                         {selectedPeople ? <Profile
                             name={selectedPeople.name}
-                            role={selectedPeople.role}
+                            role={selectedPeople.subject}
                             profileImage={selectedPeople.profileImage}
                         /> : null}
                         {_.map(currentData, item => {

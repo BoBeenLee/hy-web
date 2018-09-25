@@ -4,7 +4,7 @@ import styled from 'styled-components';
 interface IProps {
     className?: string;
     name: string;
-    role: string;
+    subject: string;
     profileImage: string;
 }
 
@@ -48,13 +48,13 @@ class People2Card extends Component<IProps> {
     }
 
     public render() {
-        const { className, name, role, profileImage } = this.props;
+        const { className, name, subject, profileImage } = this.props;
         return (
             <Container className={className}>
                 <ProfileImage src={profileImage} />
                 <BottomView>
                     <NameText>{name}</NameText>
-                    <RoleText>{role}</RoleText>
+                    <RoleText>{subject}</RoleText>
                 </BottomView>
             </Container>
         );
