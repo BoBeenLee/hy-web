@@ -127,7 +127,7 @@ class PeoplePage extends Component<object, IStates> {
                                         <PeopleCardView
                                             isActive={isActive}
                                             name={people.name}
-                                            role={people.role}
+                                            role={people.role2}
                                             profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
                                             hideInfo={false}
                                         />
@@ -154,7 +154,7 @@ class PeoplePage extends Component<object, IStates> {
                                         <PeopleCardView
                                             isActive={isActive}
                                             name={people.name}
-                                            role={people.role}
+                                            role={people.role2}
                                             profileImage={isActive ? people.profileImage : people.inActiveProfileImage}
                                             hideInfo={false}
                                         />

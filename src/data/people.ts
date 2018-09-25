@@ -2,6 +2,7 @@ interface IPeople {
     id: string;
     name: string;
     role: string;
+    role2?: string;
     subject: string;
     email: string;
     url: string;
@@ -31,6 +32,7 @@ const peopleData: IPeople[] = [
         "id": "P2",
         "name": "권임선",
         "role": "브랜드",
+        "role2": "브랜딩",
         "subject": "나만의 유니크함을 찾아주는커스터마이징색조화장 브랜드",
         "email": "",
         "url": "",
@@ -70,6 +72,7 @@ const peopleData: IPeople[] = [
         "id": "P5",
         "name": "김다솜",
         "role": "캐릭터",
+        "role2": "도록",
         "subject": "엉망진창 프렌즈",
         "email": "cn7185@naver.com",
         "url": "",
@@ -83,6 +86,7 @@ const peopleData: IPeople[] = [
         "id": "P6",
         "name": "김보민",
         "role": "브랜드",
+        "role2": "웹/홍보",
         "subject": "20대초반도 당당하게 먹을 수 있는 피임약 '모도리'",
         "email": "kk1053@naver.com",
         "url": "",
@@ -226,6 +230,7 @@ const peopleData: IPeople[] = [
         "id": "P17",
         "name": "남환희",
         "role": "일러스트",
+        "role2": "위원장",
         "subject": "HORN 게임컨셉 일러스트",
         "email": "",
         "url": "",
@@ -525,6 +530,7 @@ const peopleData: IPeople[] = [
         "id": "P40",
         "name": "이혜지",
         "role": "일러스트",
+        "role2": "부위원장",
         "subject": "지친 사람들을위한 힐링게임Wanderlog",
         "email": "heyjilee@naver.com",
         "url": "",
@@ -629,6 +635,7 @@ const peopleData: IPeople[] = [
         "id": "P48",
         "name": "한효진",
         "role": "패키지",
+        "role2": "총무",
         "subject": "시리얼패키지- COCOREAL",
         "email": "",
         "url": "",
