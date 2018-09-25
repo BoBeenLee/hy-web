@@ -10,6 +10,9 @@ interface IStates {
 }
 
 const Container = styled.div`
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     background-color: #f0f9fc;
@@ -63,7 +66,8 @@ const PeopleIntroImage = styled.img`
 `;
 
 const PeopleTableView = styled.div`
-    height: 423px;
+    display: flex;
+    flex: 1;
     overflow-y: auto;
 `;
 
