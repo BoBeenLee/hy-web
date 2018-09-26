@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 interface IProps {
     className?: string;
+    isActive: boolean;
     name: string;
     subject: string;
     profileImage: string;
 }
 
-const Container = styled.div`
+const Container = styled.div.attrs<{ isActive: boolean; }>({})`
     position: relative;
     width: 291px;
     height: 194px;
+    ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px 2px #6fc7e2;' : ''};
 `;
 
 const ProfileImage = styled.img`
@@ -48,9 +50,9 @@ class People2Card extends Component<IProps> {
     }
 
     public render() {
-        const { className, name, subject, profileImage } = this.props;
+        const { className, isActive, name, subject, profileImage } = this.props;
         return (
-            <Container className={className}>
+            <Container isActive={isActive} className={className}>
                 <ProfileImage src={profileImage} />
                 <BottomView>
                     <NameText>{name}</NameText>

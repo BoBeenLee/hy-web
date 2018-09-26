@@ -150,13 +150,16 @@ class GalleryPage extends Component<object, IStates> {
                         }) : null}
                     </SideContent>
                     <SideBar>
-                        {selectedPeople ? <Profile
-                            name={selectedPeople.name}
-                            role={selectedPeople.subject}
-                            profileImage={selectedPeople.profileImage}
-                        /> : null}
                         {_.map(currentData, item => {
                             const isActive = selectedGallery === item;
+                            if (isActive) {
+                                return selectedPeople ? <Profile
+                                    isActive={isActive}
+                                    name={selectedPeople.name}
+                                    subject={selectedPeople.subject}
+                                    profileImage={selectedPeople.profileImage}
+                                /> : null;
+                            }
                             return <Thumbnail isActive={isActive}
                                 src={item.thumbnail}
                                 onClick={_.partial(this.onSelectedGallery, item)} />

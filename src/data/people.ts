@@ -6,6 +6,7 @@ interface IPeople {
     subject: string;
     email: string;
     url: string;
+    url2?: string;
     thought: string;
     videoUrl: string;
     videoOrder: string;
@@ -84,12 +85,13 @@ const peopleData: IPeople[] = [
     },
     {
         "id": "P6",
-        "name": "김보민",
+        "name": "빈민",
         "role": "브랜드",
         "role2": "웹/홍보",
         "subject": "20대초반도 당당하게 먹을 수 있는 피임약 '모도리'",
         "email": "kk1053@naver.com",
         "url": "",
+        "url2": "",
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",

@@ -10,9 +10,9 @@ storiesOf("HY", module)
     .add("with CheerCard", () => <CheerCard title="Hello" createdAt={(new Date()).getTime()} type="top" />)
     .add("with CheerInput", () => <CheerInput value="hello" />)
     .add("with InfoSection", () => <InfoSection hideDivier={false} hideTitle={false} title="Hello" content={"loremlorem"} dividerWidth={10} />)
-    .add("with PeopleCard", () => <PeopleCard isActive={true} {...{
+    .add("with PeopleCard", () => <PeopleCard isActive={true} hideInfo={false} {...{
         "name": "권솔이",
-        "role": "UXUI",
+        "role": "Hello",
         "profileImage": "https://via.placeholder.com/300x300"
     }} />)
     .add("with SelectedPeopleCard", () => <SelectedPeopleCard data={{
@@ -25,6 +25,7 @@ storiesOf("HY", module)
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "https://via.placeholder.com/300x300"
+        "profileImage": "https://via.placeholder.com/300x300",
+        "inActiveProfileImage": "https://via.placeholder.com/300x300"
     }} />)
     .add("with GalleryTopBar", () => <GalleryTopBar onMenuChange={action("indexChange")} menus={["Brand", "Package", "Illustration", "UXUI", "Editorial"]} currentMenuName={"Brand"} />);
