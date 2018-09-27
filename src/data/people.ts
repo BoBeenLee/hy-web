@@ -85,7 +85,7 @@ const peopleData: IPeople[] = [
     },
     {
         "id": "P6",
-        "name": "빈민",
+        "name": "김보민",
         "role": "브랜드",
         "role2": "웹/홍보",
         "subject": "20대초반도 당당하게 먹을 수 있는 피임약 '모도리'",
