@@ -130,7 +130,9 @@ class GalleryPage extends Component<object, IStates> {
                 <Content>
                     <SideContent innerRef={this.sideContentRef}>
                         {selectedGallery ? _.map(selectedGallery.images, image => {
-                            return (<ContentImage key={image} publicId={image} />)
+                            return (<ContentImage key={image} publicId={image}>
+                                <Transformation quality="100" />
+                            </ContentImage>)
                         }) : null}
                     </SideContent>
                     <SideBar innerRef={this.sideBarRef}>

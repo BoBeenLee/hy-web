@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/2018`,
   siteMetadata: {
     title: `HYCD`,
     googleVerification: `abcdefz`,
