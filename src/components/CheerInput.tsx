@@ -10,7 +10,6 @@ interface IProps {
 
 const Container = styled.form`
     text-align: center;
-    width: 75px;
     height: 60px;
     border-radius: 8px;
     padding-top: 16.5px;

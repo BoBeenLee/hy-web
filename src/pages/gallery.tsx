@@ -38,6 +38,7 @@ const SideContent = styled.div`
 
 const ContentImage = styled(Image)`
     width: 100%;
+    object-fit: contain;
 `;
 
 const SideBar = styled.div`
