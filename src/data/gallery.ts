@@ -79,10 +79,10 @@ const galleryData: IGallery[] = [
         ]
     },
     {
-        id: "P11",
-        thumbnail: PREFIX_THUMBNAIL("P11"),
+        id: "P10",
+        thumbnail: PREFIX_THUMBNAIL("P10"),
         images: [
-            `${PREFIX("P11")}/1.png`
+            `${PREFIX("P10")}/1.png`
         ],
         isDrop: true
     },
