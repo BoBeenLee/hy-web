@@ -44,20 +44,6 @@ const peopleData: IPeople[] = [
         "role2": "브랜딩"
     },
     {
-        "id": "P3",
-        "name": "중도포기",
-        "role": "",
-        "subject": "",
-        "email": "",
-        "url": "",
-        "thought": "",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p3.jpg",
-        "inActiveProfileImage": "./image/people/p3_.jpg",
-        "role2": ""
-    },
-    {
         "id": "P4",
         "name": "김규리",
         "role": "UXUI",
@@ -156,34 +142,6 @@ const peopleData: IPeople[] = [
         "role2": ""
     },
     {
-        "id": "P11",
-        "name": "탈락",
-        "role": "패키지",
-        "subject": "복약순응도를높이는 약 패키지",
-        "email": "gpdms9039@naver.com",
-        "url": "",
-        "thought": "미제출",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p11.jpg",
-        "inActiveProfileImage": "./image/people/p11_.jpg",
-        "role2": ""
-    },
-    {
-        "id": "P12",
-        "name": "탈락",
-        "role": "브랜드",
-        "subject": "쿠킹박스",
-        "email": "미제출",
-        "url": "",
-        "thought": "미제출",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p12.jpg",
-        "inActiveProfileImage": "./image/people/p12_.jpg",
-        "role2": ""
-    },
-    {
         "id": "P13",
         "name": "김홍욱",
         "role": "패키지",
@@ -268,34 +226,6 @@ const peopleData: IPeople[] = [
         "role2": ""
     },
     {
-        "id": "P19",
-        "name": "중도포기",
-        "role": "",
-        "subject": "",
-        "email": "",
-        "url": "",
-        "thought": "",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p19.jpg",
-        "inActiveProfileImage": "./image/people/p19_.jpg",
-        "role2": ""
-    },
-    {
-        "id": "P20",
-        "name": "탈락",
-        "role": "브랜드",
-        "subject": "아동성교육의 시작, 청결 'arari'",
-        "email": "acbir@naver.com",
-        "url": "",
-        "thought": "미제출",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p20.jpg",
-        "inActiveProfileImage": "./image/people/p20_.jpg",
-        "role2": ""
-    },
-    {
         "id": "P21",
         "name": "박민정",
         "role": "브랜드",
@@ -321,20 +251,6 @@ const peopleData: IPeople[] = [
         "videoOrder": "",
         "profileImage": "./image/people/p22.jpg",
         "inActiveProfileImage": "./image/people/p22_.jpg",
-        "role2": ""
-    },
-    {
-        "id": "P23",
-        "name": "탈락",
-        "role": "패키지",
-        "subject": "못해도 돼 '네일가든'",
-        "email": "qqkffl5@naver.com",
-        "url": "",
-        "thought": "대학 졸업하려다 인생도 졸업하게 생겼어요.",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p23.jpg",
-        "inActiveProfileImage": "./image/people/p23_.jpg",
         "role2": ""
     },
     {
@@ -447,20 +363,6 @@ const peopleData: IPeople[] = [
         "videoOrder": "",
         "profileImage": "./image/people/p31.jpg",
         "inActiveProfileImage": "./image/people/p31_.jpg",
-        "role2": ""
-    },
-    {
-        "id": "P32",
-        "name": "중도포기",
-        "role": "",
-        "subject": "",
-        "email": "",
-        "url": "",
-        "thought": "",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p32.jpg",
-        "inActiveProfileImage": "./image/people/p32_.jpg",
         "role2": ""
     },
     {
@@ -590,20 +492,6 @@ const peopleData: IPeople[] = [
         "role2": ""
     },
     {
-        "id": "P42",
-        "name": "탈락",
-        "role": "브랜드",
-        "subject": "쌈장",
-        "email": "미제출",
-        "url": "",
-        "thought": "미제출",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p42.jpg",
-        "inActiveProfileImage": "./image/people/p42_.jpg",
-        "role2": ""
-    },
-    {
         "id": "P43",
         "name": "정소원",
         "role": "UXUI",
@@ -686,20 +574,6 @@ const peopleData: IPeople[] = [
         "profileImage": "./image/people/p48.jpg",
         "inActiveProfileImage": "./image/people/p48_.jpg",
         "role2": "총무"
-    },
-    {
-        "id": "P49",
-        "name": "중도포기",
-        "role": "",
-        "subject": "",
-        "email": "",
-        "url": "",
-        "thought": "",
-        "videoUrl": "",
-        "videoOrder": "",
-        "profileImage": "./image/people/p49.jpg",
-        "inActiveProfileImage": "./image/people/p49_.jpg",
-        "role2": ""
     }
 ];
 
