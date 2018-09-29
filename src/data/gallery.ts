@@ -2,6 +2,7 @@ interface IGallery {
     id: string;
     thumbnail: string;
     images?: string[];
+    isDrop?: boolean;
 }
 
 const PREFIX = (id: string) => `hyweb/${id}`;
@@ -82,7 +83,8 @@ const galleryData: IGallery[] = [
         thumbnail: PREFIX_THUMBNAIL("P11"),
         images: [
             `${PREFIX("P11")}/1.png`
-        ]
+        ],
+        isDrop: true
     },
     {
         id: "P13",
@@ -334,5 +336,7 @@ const galleryData: IGallery[] = [
     }
 ];
 
+const filterDrop = galleryData.filter(gallery => !gallery.isDrop);
+
 export { IGallery };
-export default galleryData;
+export default filterDrop;
