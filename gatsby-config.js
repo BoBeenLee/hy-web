@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My website`,
+    title: `HYCD`,
     googleVerification: `abcdefz`,
     disqus: `gatsby-typescript`
   },

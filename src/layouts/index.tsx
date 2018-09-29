@@ -49,7 +49,7 @@ const Layout: SFC<IProps> = ({ children }) => (
   <Container>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>HY</title>
+      <title>HYCD</title>
     </Helmet>
     <Header />
     <CloudinaryView cloudName="one-person">

@@ -45,9 +45,9 @@ module.exports = (props: HtmlProps) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
         <meta name="keywords"
-          content="hy" />
+          content="HYCD" />
         <meta name="description"
-          content="hy" />
+          content="HYCD" />
         <link rel="shortcut icon" href={require("./favicon.png")} type="image/png" />
         {head.title.toComponent()}
         {head.meta.toComponent()}
