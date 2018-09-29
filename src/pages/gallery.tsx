@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from "react";
 import styled from 'styled-components';
-import { Image } from 'cloudinary-react';
+import { Image, Transformation } from 'cloudinary-react';
 
 import { GalleryTopBar, People2Card } from '../components';
 import galleryData, { IGallery } from "../data/gallery";
@@ -126,7 +126,7 @@ class GalleryPage extends Component<object, IStates> {
                     <SideBar>
                         {_.map(currentData, item => {
                             const isActive = selectedGallery === item;
-                            return <ThumbnailView>
+                            return (<ThumbnailView>
                                 <Profile
                                     isActive={isActive}
                                     name={selectedPeople.name}
@@ -135,8 +135,10 @@ class GalleryPage extends Component<object, IStates> {
                                 />
                                 <Thumbnail isActive={isActive}
                                     publicId={item.thumbnail}
-                                    onClick={_.partial(this.onSelectedGallery, item)} />
-                            </ThumbnailView>;
+                                    onClick={_.partial(this.onSelectedGallery, item)}>
+                                    <Transformation quality="60" />
+                                </Thumbnail>
+                            </ThumbnailView>);
                         })}
                     </SideBar>
                 </Content>
