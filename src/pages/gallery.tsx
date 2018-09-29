@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { Component } from "react";
+import React, { Component, RefObject } from "react";
 import styled from 'styled-components';
 import { Image, Transformation } from 'cloudinary-react';
 
@@ -47,7 +47,7 @@ const SideBar = styled.div`
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    overflow: auto;
+    overflow-y: auto;
 `;
 
 const ThumbnailView = styled.div``;
@@ -109,6 +109,16 @@ class GalleryPage extends Component<object, IStates> {
         currentMenuName: "Brand",
         selectedGallery: _.first(data.Brand)
     };
+
+    public sideContentRef: RefObject<any> = null;
+    public sideBarRef: RefObject<any> = null;
+
+    constructor(props: object) {
+        super(props);
+        this.sideContentRef = React.createRef();
+        this.sideBarRef = React.createRef();
+    }
+
     public render() {
         const { currentMenuName, selectedGallery } = this.state;
         const currentData = data[currentMenuName];
@@ -118,15 +128,15 @@ class GalleryPage extends Component<object, IStates> {
             <Container>
                 <GalleryTopBar onMenuChange={this.onIndexChange} menus={["Brand", "UXUI", "Package", "Character", "Illustration"]} currentMenuName={currentMenuName} />
                 <Content>
-                    <SideContent>
+                    <SideContent innerRef={this.sideContentRef}>
                         {selectedGallery ? _.map(selectedGallery.images, image => {
-                            return (<ContentImage publicId={image} />)
+                            return (<ContentImage key={image} publicId={image} />)
                         }) : null}
                     </SideContent>
-                    <SideBar>
+                    <SideBar innerRef={this.sideBarRef}>
                         {_.map(currentData, item => {
                             const isActive = selectedGallery === item;
-                            return (<ThumbnailView>
+                            return (<ThumbnailView key={item.id}>
                                 <Profile
                                     isActive={isActive}
                                     name={selectedPeople.name}
@@ -150,12 +160,17 @@ class GalleryPage extends Component<object, IStates> {
         this.setState({
             currentMenuName: name,
             selectedGallery: _.first(data[name])
+        }, () => {
+            this.sideContentRef.current.scrollTop = 0;
+            this.sideBarRef.current.scrollTop = 0;
         });
     }
 
     private onSelectedGallery = (gallery: IGalleryItem) => {
         this.setState({
             selectedGallery: gallery
+        }, () => {
+            this.sideContentRef.current.scrollTop = 0;
         });
     }
 }
