@@ -26,6 +26,7 @@ const ProfileImage = styled.img`
 const BottomView = styled.div`
     position: absolute;
     left: 15px;
+    right: 15px;
     bottom: 15px;
 `;
 
