@@ -25,8 +25,8 @@ const peopleData: IPeople[] = [
         "thought": "평생 대학생이고 싶었는데..졸업이네요! 수고하셨어요~",
         "videoUrl": "https://youtu.be/7tVASM9VTkE",
         "videoOrder": "상단",
-        "profileImage": "require('./image/people/p1.jpg')",
-        "inActiveProfileImage": "require('./image/people/p1_.jpg')",
+        "profileImage": "./image/people/p1.jpg",
+        "inActiveProfileImage": "./image/people/p1_.jpg",
         "role2": ""
     },
     {
@@ -39,8 +39,8 @@ const peopleData: IPeople[] = [
         "thought": "벌써 졸업하네용.. 다들 수고많으셨구 졸업축하드려요(~˘▾˘)~",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p2.jpg')",
-        "inActiveProfileImage": "require('./image/people/p2_.jpg')",
+        "profileImage": "./image/people/p2.jpg",
+        "inActiveProfileImage": "./image/people/p2_.jpg",
         "role2": "브랜딩"
     },
     {
@@ -53,8 +53,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p3.jpg')",
-        "inActiveProfileImage": "require('./image/people/p3_.jpg')",
+        "profileImage": "./image/people/p3.jpg",
+        "inActiveProfileImage": "./image/people/p3_.jpg",
         "role2": ""
     },
     {
@@ -67,8 +67,8 @@ const peopleData: IPeople[] = [
         "thought": "적게 일하고 많이 버세요~♣ ♧ ",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p4.jpg')",
-        "inActiveProfileImage": "require('./image/people/p4_.jpg')",
+        "profileImage": "./image/people/p4.jpg",
+        "inActiveProfileImage": "./image/people/p4_.jpg",
         "role2": ""
     },
     {
@@ -81,8 +81,8 @@ const peopleData: IPeople[] = [
         "thought": "소감 정하는게 작품주제 선정보다도 어렵네요 무사히 졸업하게되어서 다행입니다 ٩(๑❛ᴗ❛๑)۶♡",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p5.jpg')",
-        "inActiveProfileImage": "require('./image/people/p5_.jpg')",
+        "profileImage": "./image/people/p5.jpg",
+        "inActiveProfileImage": "./image/people/p5_.jpg",
         "role2": "도록"
     },
     {
@@ -95,8 +95,8 @@ const peopleData: IPeople[] = [
         "thought": "유일한 자랑인 튼튼한 장을 졸전에 두고갑니다",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p6.jpg')",
-        "inActiveProfileImage": "require('./image/people/p6_.jpg')",
+        "profileImage": "./image/people/p6.jpg",
+        "inActiveProfileImage": "./image/people/p6_.jpg",
         "role2": "웹/홍보"
     },
     {
@@ -109,8 +109,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p7.jpg')",
-        "inActiveProfileImage": "require('./image/people/p7_.jpg')",
+        "profileImage": "./image/people/p7.jpg",
+        "inActiveProfileImage": "./image/people/p7_.jpg",
         "role2": ""
     },
     {
@@ -123,8 +123,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p8.jpg')",
-        "inActiveProfileImage": "require('./image/people/p8_.jpg')",
+        "profileImage": "./image/people/p8.jpg",
+        "inActiveProfileImage": "./image/people/p8_.jpg",
         "role2": ""
     },
     {
@@ -137,8 +137,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p9.jpg')",
-        "inActiveProfileImage": "require('./image/people/p9_.jpg')",
+        "profileImage": "./image/people/p9.jpg",
+        "inActiveProfileImage": "./image/people/p9_.jpg",
         "role2": ""
     },
     {
@@ -151,8 +151,8 @@ const peopleData: IPeople[] = [
         "thought": "1학년이 엊그제같은데 벌써 졸업이네요ㅠ 다들 수고하셨어요!!:)",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p10.jpg')",
-        "inActiveProfileImage": "require('./image/people/p10_.jpg')",
+        "profileImage": "./image/people/p10.jpg",
+        "inActiveProfileImage": "./image/people/p10_.jpg",
         "role2": ""
     },
     {
@@ -165,8 +165,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p11.jpg')",
-        "inActiveProfileImage": "require('./image/people/p11_.jpg')",
+        "profileImage": "./image/people/p11.jpg",
+        "inActiveProfileImage": "./image/people/p11_.jpg",
         "role2": ""
     },
     {
@@ -179,8 +179,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p12.jpg')",
-        "inActiveProfileImage": "require('./image/people/p12_.jpg')",
+        "profileImage": "./image/people/p12.jpg",
+        "inActiveProfileImage": "./image/people/p12_.jpg",
         "role2": ""
     },
     {
@@ -193,8 +193,8 @@ const peopleData: IPeople[] = [
         "thought": "안돼 가지마",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p13.jpg')",
-        "inActiveProfileImage": "require('./image/people/p13_.jpg')",
+        "profileImage": "./image/people/p13.jpg",
+        "inActiveProfileImage": "./image/people/p13_.jpg",
         "role2": ""
     },
     {
@@ -207,8 +207,8 @@ const peopleData: IPeople[] = [
         "thought": "모두 수고하셨어요^~^",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p14.jpg')",
-        "inActiveProfileImage": "require('./image/people/p14_.jpg')",
+        "profileImage": "./image/people/p14.jpg",
+        "inActiveProfileImage": "./image/people/p14_.jpg",
         "role2": ""
     },
     {
@@ -221,8 +221,8 @@ const peopleData: IPeople[] = [
         "thought": "ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚ 졸업길 축복을",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p15.jpg')",
-        "inActiveProfileImage": "require('./image/people/p15_.jpg')",
+        "profileImage": "./image/people/p15.jpg",
+        "inActiveProfileImage": "./image/people/p15_.jpg",
         "role2": ""
     },
     {
@@ -235,8 +235,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p16.jpg')",
-        "inActiveProfileImage": "require('./image/people/p16_.jpg')",
+        "profileImage": "./image/people/p16.jpg",
+        "inActiveProfileImage": "./image/people/p16_.jpg",
         "role2": ""
     },
     {
@@ -249,8 +249,8 @@ const peopleData: IPeople[] = [
         "thought": "끝, 졸업",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p17.jpg')",
-        "inActiveProfileImage": "require('./image/people/p17_.jpg')",
+        "profileImage": "./image/people/p17.jpg",
+        "inActiveProfileImage": "./image/people/p17_.jpg",
         "role2": "위원장"
     },
     {
@@ -263,8 +263,8 @@ const peopleData: IPeople[] = [
         "thought": "이제 내 인생에 방학이 없다니.. 다들 졸업 축하해요 :D!",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p18.jpg')",
-        "inActiveProfileImage": "require('./image/people/p18_.jpg')",
+        "profileImage": "./image/people/p18.jpg",
+        "inActiveProfileImage": "./image/people/p18_.jpg",
         "role2": ""
     },
     {
@@ -277,8 +277,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p19.jpg')",
-        "inActiveProfileImage": "require('./image/people/p19_.jpg')",
+        "profileImage": "./image/people/p19.jpg",
+        "inActiveProfileImage": "./image/people/p19_.jpg",
         "role2": ""
     },
     {
@@ -291,8 +291,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p20.jpg')",
-        "inActiveProfileImage": "require('./image/people/p20_.jpg')",
+        "profileImage": "./image/people/p20.jpg",
+        "inActiveProfileImage": "./image/people/p20_.jpg",
         "role2": ""
     },
     {
@@ -305,8 +305,8 @@ const peopleData: IPeople[] = [
         "thought": "졸업 진짜 하는건가여???ㅎㅅㅎ",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p21.jpg')",
-        "inActiveProfileImage": "require('./image/people/p21_.jpg')",
+        "profileImage": "./image/people/p21.jpg",
+        "inActiveProfileImage": "./image/people/p21_.jpg",
         "role2": ""
     },
     {
@@ -319,8 +319,8 @@ const peopleData: IPeople[] = [
         "thought": "벌써 졸업이라니 소오름~! 전 아직 베이빈데 응애응애 졸업시켜줘여!",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p22.jpg')",
-        "inActiveProfileImage": "require('./image/people/p22_.jpg')",
+        "profileImage": "./image/people/p22.jpg",
+        "inActiveProfileImage": "./image/people/p22_.jpg",
         "role2": ""
     },
     {
@@ -333,8 +333,8 @@ const peopleData: IPeople[] = [
         "thought": "대학 졸업하려다 인생도 졸업하게 생겼어요.",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p23.jpg')",
-        "inActiveProfileImage": "require('./image/people/p23_.jpg')",
+        "profileImage": "./image/people/p23.jpg",
+        "inActiveProfileImage": "./image/people/p23_.jpg",
         "role2": ""
     },
     {
@@ -347,8 +347,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p24.jpg')",
-        "inActiveProfileImage": "require('./image/people/p24_.jpg')",
+        "profileImage": "./image/people/p24.jpg",
+        "inActiveProfileImage": "./image/people/p24_.jpg",
         "role2": ""
     },
     {
@@ -361,8 +361,8 @@ const peopleData: IPeople[] = [
         "thought": "냥냠은 냥냠",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p25.jpg')",
-        "inActiveProfileImage": "require('./image/people/p25_.jpg')",
+        "profileImage": "./image/people/p25.jpg",
+        "inActiveProfileImage": "./image/people/p25_.jpg",
         "role2": ""
     },
     {
@@ -375,8 +375,8 @@ const peopleData: IPeople[] = [
         "thought": "끝났다!",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p26.jpg')",
-        "inActiveProfileImage": "require('./image/people/p26_.jpg')",
+        "profileImage": "./image/people/p26.jpg",
+        "inActiveProfileImage": "./image/people/p26_.jpg",
         "role2": ""
     },
     {
@@ -389,8 +389,8 @@ const peopleData: IPeople[] = [
         "thought": "전 아직도 제가 뭘 해먹고 살지 모르겠어요- 다들 졸업축하합니다 ^^7",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p27.jpg')",
-        "inActiveProfileImage": "require('./image/people/p27_.jpg')",
+        "profileImage": "./image/people/p27.jpg",
+        "inActiveProfileImage": "./image/people/p27_.jpg",
         "role2": ""
     },
     {
@@ -403,8 +403,8 @@ const peopleData: IPeople[] = [
         "thought": "👈귀여움으로 먹고 사시면 됩니당 (❀◕ω◕)♡",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p28.jpg')",
-        "inActiveProfileImage": "require('./image/people/p28_.jpg')",
+        "profileImage": "./image/people/p28.jpg",
+        "inActiveProfileImage": "./image/people/p28_.jpg",
         "role2": ""
     },
     {
@@ -417,8 +417,8 @@ const peopleData: IPeople[] = [
         "thought": "다들 수고 많으셨습니당! 졸업축하드려욧!(*•̀ᴗ•́*)و ̑̑",
         "videoUrl": "https://youtu.be/KvhkOwL13ks",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p29.jpg')",
-        "inActiveProfileImage": "require('./image/people/p29_.jpg')",
+        "profileImage": "./image/people/p29.jpg",
+        "inActiveProfileImage": "./image/people/p29_.jpg",
         "role2": ""
     },
     {
@@ -431,8 +431,8 @@ const peopleData: IPeople[] = [
         "thought": "졸업 축하드려요 수고하셨습니다.",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p30.jpg')",
-        "inActiveProfileImage": "require('./image/people/p30_.jpg')",
+        "profileImage": "./image/people/p30.jpg",
+        "inActiveProfileImage": "./image/people/p30_.jpg",
         "role2": ""
     },
     {
@@ -445,8 +445,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p31.jpg')",
-        "inActiveProfileImage": "require('./image/people/p31_.jpg')",
+        "profileImage": "./image/people/p31.jpg",
+        "inActiveProfileImage": "./image/people/p31_.jpg",
         "role2": ""
     },
     {
@@ -459,8 +459,8 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p32.jpg')",
-        "inActiveProfileImage": "require('./image/people/p32_.jpg')",
+        "profileImage": "./image/people/p32.jpg",
+        "inActiveProfileImage": "./image/people/p32_.jpg",
         "role2": ""
     },
     {
@@ -473,8 +473,8 @@ const peopleData: IPeople[] = [
         "thought": "(경) 졸 업 축 하 축 하 ㄱ-y~ (축)",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p33.jpg')",
-        "inActiveProfileImage": "require('./image/people/p33_.jpg')",
+        "profileImage": "./image/people/p33.jpg",
+        "inActiveProfileImage": "./image/people/p33_.jpg",
         "role2": ""
     },
     {
@@ -487,8 +487,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p34.jpg')",
-        "inActiveProfileImage": "require('./image/people/p34_.jpg')",
+        "profileImage": "./image/people/p34.jpg",
+        "inActiveProfileImage": "./image/people/p34_.jpg",
         "role2": ""
     },
     {
@@ -501,8 +501,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "https://youtu.be/NkyG99J2_Xs",
         "videoOrder": "1번과 2번 사이",
-        "profileImage": "require('./image/people/p35.jpg')",
-        "inActiveProfileImage": "require('./image/people/p35_.jpg')",
+        "profileImage": "./image/people/p35.jpg",
+        "inActiveProfileImage": "./image/people/p35_.jpg",
         "role2": ""
     },
     {
@@ -515,8 +515,8 @@ const peopleData: IPeople[] = [
         "thought": "모두 돈길만 걸으시길ㄱ-y~",
         "videoUrl": "수요일까지 작업하기로 웹 담당과 협의 완료",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p36.jpg')",
-        "inActiveProfileImage": "require('./image/people/p36_.jpg')",
+        "profileImage": "./image/people/p36.jpg",
+        "inActiveProfileImage": "./image/people/p36_.jpg",
         "role2": ""
     },
     {
@@ -529,8 +529,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p37.jpg')",
-        "inActiveProfileImage": "require('./image/people/p37_.jpg')",
+        "profileImage": "./image/people/p37.jpg",
+        "inActiveProfileImage": "./image/people/p37_.jpg",
         "role2": ""
     },
     {
@@ -543,8 +543,8 @@ const peopleData: IPeople[] = [
         "thought": "모어 카페인",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p38.jpg')",
-        "inActiveProfileImage": "require('./image/people/p38_.jpg')",
+        "profileImage": "./image/people/p38.jpg",
+        "inActiveProfileImage": "./image/people/p38_.jpg",
         "role2": ""
     },
     {
@@ -557,8 +557,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p39.jpg')",
-        "inActiveProfileImage": "require('./image/people/p39_.jpg')",
+        "profileImage": "./image/people/p39.jpg",
+        "inActiveProfileImage": "./image/people/p39_.jpg",
         "role2": ""
     },
     {
@@ -571,8 +571,8 @@ const peopleData: IPeople[] = [
         "thought": "다들 고생 많으셨어요! 나는 아직 학생이고싶은데...\n적게 일하고 많이 벌게 해주세요 :)",
         "videoUrl": "https://youtu.be/IBryomDdxjo",
         "videoOrder": "1-2사이",
-        "profileImage": "require('./image/people/p40.jpg')",
-        "inActiveProfileImage": "require('./image/people/p40_.jpg')",
+        "profileImage": "./image/people/p40.jpg",
+        "inActiveProfileImage": "./image/people/p40_.jpg",
         "role2": "부위원장"
     },
     {
@@ -585,8 +585,8 @@ const peopleData: IPeople[] = [
         "thought": "모두 행복하세요^^",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p41.jpg')",
-        "inActiveProfileImage": "require('./image/people/p41_.jpg')",
+        "profileImage": "./image/people/p41.jpg",
+        "inActiveProfileImage": "./image/people/p41_.jpg",
         "role2": ""
     },
     {
@@ -599,8 +599,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p42.jpg')",
-        "inActiveProfileImage": "require('./image/people/p42_.jpg')",
+        "profileImage": "./image/people/p42.jpg",
+        "inActiveProfileImage": "./image/people/p42_.jpg",
         "role2": ""
     },
     {
@@ -613,8 +613,8 @@ const peopleData: IPeople[] = [
         "thought": "모두 수고하셨습니당!",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p43.jpg')",
-        "inActiveProfileImage": "require('./image/people/p43_.jpg')",
+        "profileImage": "./image/people/p43.jpg",
+        "inActiveProfileImage": "./image/people/p43_.jpg",
         "role2": ""
     },
     {
@@ -627,8 +627,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p44.jpg')",
-        "inActiveProfileImage": "require('./image/people/p44_.jpg')",
+        "profileImage": "./image/people/p44.jpg",
+        "inActiveProfileImage": "./image/people/p44_.jpg",
         "role2": ""
     },
     {
@@ -641,8 +641,8 @@ const peopleData: IPeople[] = [
         "thought": "졸업시켜주세요...",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p45.jpg')",
-        "inActiveProfileImage": "require('./image/people/p45_.jpg')",
+        "profileImage": "./image/people/p45.jpg",
+        "inActiveProfileImage": "./image/people/p45_.jpg",
         "role2": ""
     },
     {
@@ -655,8 +655,8 @@ const peopleData: IPeople[] = [
         "thought": "허리 한번씩 폅시다",
         "videoUrl": "1-2 사이\nhttps://youtu.be/OKOlc5f1HQ0 \n2-3 사이\nhttps://youtu.be/Wb0OfQof8W0 \n3-4 사이\nhttps://youtu.be/XKHUvgTxLio ",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p46.jpg')",
-        "inActiveProfileImage": "require('./image/people/p46_.jpg')",
+        "profileImage": "./image/people/p46.jpg",
+        "inActiveProfileImage": "./image/people/p46_.jpg",
         "role2": ""
     },
     {
@@ -669,8 +669,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p47.jpg')",
-        "inActiveProfileImage": "require('./image/people/p47_.jpg')",
+        "profileImage": "./image/people/p47.jpg",
+        "inActiveProfileImage": "./image/people/p47_.jpg",
         "role2": ""
     },
     {
@@ -683,8 +683,8 @@ const peopleData: IPeople[] = [
         "thought": "미제출",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p48.jpg')",
-        "inActiveProfileImage": "require('./image/people/p48_.jpg')",
+        "profileImage": "./image/people/p48.jpg",
+        "inActiveProfileImage": "./image/people/p48_.jpg",
         "role2": "총무"
     },
     {
@@ -697,11 +697,20 @@ const peopleData: IPeople[] = [
         "thought": "",
         "videoUrl": "",
         "videoOrder": "",
-        "profileImage": "require('./image/people/p49.jpg')",
-        "inActiveProfileImage": "require('./image/people/p49_.jpg')",
+        "profileImage": "./image/people/p49.jpg",
+        "inActiveProfileImage": "./image/people/p49_.jpg",
         "role2": ""
     }
 ];
 
+const transformedImage = peopleData.map(people => {
+    const { profileImage, inActiveProfileImage } = people;
+    return {
+        ...people,
+        profileImage: require(profileImage),
+        inActiveProfileImage: require(inActiveProfileImage)
+    };
+})
+
 export { IPeople };
-export default peopleData;
+export default transformedImage;
