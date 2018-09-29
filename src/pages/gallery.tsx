@@ -50,7 +50,10 @@ const SideBar = styled.div`
     overflow: auto;
 `;
 
-const Profile = styled(People2Card)`
+const ThumbnailView = styled.div``;
+
+const Profile = styled(People2Card).attrs<{ isActive: boolean; }>({})`
+    ${({ isActive }) => isActive ? 'display: flex' : 'display: none'};
     margin-bottom: 24px;
 `;
 
@@ -59,7 +62,7 @@ const Thumbnail = styled(Image).attrs<{ isActive: boolean; }>({})`
     height: 194px;
     cursor: pointer;
     margin-bottom: 24px;
-    ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px 2px #6fc7e2;' : ''};
+    ${({ isActive }) => isActive ? 'display: none' : 'display: flex'};
 `;
 
 // tslint:disable:object-literal-sort-keys
@@ -123,17 +126,17 @@ class GalleryPage extends Component<object, IStates> {
                     <SideBar>
                         {_.map(currentData, item => {
                             const isActive = selectedGallery === item;
-                            if (isActive) {
-                                return selectedPeople ? <Profile
+                            return <ThumbnailView>
+                                <Profile
                                     isActive={isActive}
                                     name={selectedPeople.name}
                                     subject={selectedPeople.subject}
                                     profileImage={selectedPeople.profileImage}
-                                /> : null;
-                            }
-                            return <Thumbnail isActive={isActive}
-                                publicId={item.thumbnail}
-                                onClick={_.partial(this.onSelectedGallery, item)} />
+                                />
+                                <Thumbnail isActive={isActive}
+                                    publicId={item.thumbnail}
+                                    onClick={_.partial(this.onSelectedGallery, item)} />
+                            </ThumbnailView>;
                         })}
                     </SideBar>
                 </Content>
