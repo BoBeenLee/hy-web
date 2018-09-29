@@ -1,14 +1,17 @@
 import _ from 'lodash';
 import React, { Component } from "react";
 import styled from 'styled-components';
+import { Image } from 'cloudinary-react';
 
 import { GalleryTopBar, People2Card } from '../components';
 import galleryData, { IGallery } from "../data/gallery";
 import peopleData, { IPeople } from "../data/people";
 
+type IGalleryItem = IGallery;
+
 interface IStates {
     currentMenuName: string;
-    selectedGallery: IGallery | null;
+    selectedGallery: IGalleryItem | null;
 }
 
 const Container = styled.div`
@@ -33,7 +36,7 @@ const SideContent = styled.div`
     overflow-y: auto;
 `;
 
-const Image = styled.img`
+const ContentImage = styled(Image)`
     width: 100%;
 `;
 
@@ -51,7 +54,7 @@ const Profile = styled(People2Card)`
     margin-bottom: 24px;
 `;
 
-const Thumbnail = styled.img.attrs<{ isActive: boolean; }>({})`
+const Thumbnail = styled(Image).attrs<{ isActive: boolean; }>({})`
     width: 291px;
     height: 194px;
     cursor: pointer;
@@ -60,74 +63,42 @@ const Thumbnail = styled.img.attrs<{ isActive: boolean; }>({})`
 `;
 
 // tslint:disable:object-literal-sort-keys
-const data: { [key: string]: IGallery[] } = {
-    "Brand": [
-        {
-            id: "P1",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
-        },
-        {
-            id: "P2",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
+const data: { [key: string]: IGalleryItem[] } = {
+    "Brand": _.filter(galleryData, gallery => {
+        const selectedPeople = _.find(peopleData, people => people.id === gallery.id);
+        if (!selectedPeople) {
+            return false;
         }
-    ],
-    "UXUI": [
-        ...galleryData
-    ],
-    "Package": [
-        {
-            id: "P3",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
-        },
-        {
-            id: "P4",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
+        return ["브랜드"].includes(selectedPeople.role);
+    }),
+    "UXUI": _.filter(galleryData, gallery => {
+        const selectedPeople = _.find(peopleData, people => people.id === gallery.id);
+        if (!selectedPeople) {
+            return false;
         }
-    ],
-    "Character": [
-        {
-            id: "P5",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
+        return ["UXUI"].includes(selectedPeople.role);
+    }),
+    "Package": _.filter(galleryData, gallery => {
+        const selectedPeople = _.find(peopleData, people => people.id === gallery.id);
+        if (!selectedPeople) {
+            return false;
         }
-    ],
-    "Illustration": [
-        {
-            id: "P6",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
-        },
-        {
-            id: "P7",
-            role: "UXUI",
-            thumbnail: "https://via.placeholder.com/300x300",
-            images: [
-                "https://via.placeholder.com/300x300"
-            ]
+        return ["패키지"].includes(selectedPeople.role);
+    }),
+    "Character": _.filter(galleryData, gallery => {
+        const selectedPeople = _.find(peopleData, people => people.id === gallery.id);
+        if (!selectedPeople) {
+            return false;
         }
-    ],
+        return ["캐릭터"].includes(selectedPeople.role);
+    }),
+    "Illustration": _.filter(galleryData, gallery => {
+        const selectedPeople = _.find(peopleData, people => people.id === gallery.id);
+        if (!selectedPeople) {
+            return false;
+        }
+        return ["일러스트"].includes(selectedPeople.role);
+    })
 }
 
 class GalleryPage extends Component<object, IStates> {
@@ -146,7 +117,7 @@ class GalleryPage extends Component<object, IStates> {
                 <Content>
                     <SideContent>
                         {selectedGallery ? _.map(selectedGallery.images, image => {
-                            return <Image src={image} />
+                            return (<ContentImage publicId={image} />)
                         }) : null}
                     </SideContent>
                     <SideBar>
@@ -161,7 +132,7 @@ class GalleryPage extends Component<object, IStates> {
                                 /> : null;
                             }
                             return <Thumbnail isActive={isActive}
-                                src={item.thumbnail}
+                                publicId={item.thumbnail}
                                 onClick={_.partial(this.onSelectedGallery, item)} />
                         })}
                     </SideBar>
@@ -177,7 +148,7 @@ class GalleryPage extends Component<object, IStates> {
         });
     }
 
-    private onSelectedGallery = (gallery: IGallery) => {
+    private onSelectedGallery = (gallery: IGalleryItem) => {
         this.setState({
             selectedGallery: gallery
         });

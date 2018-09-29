@@ -1,6 +1,7 @@
 import React, { SFC } from "react";
 import { Helmet } from "react-helmet";
 import styled, { injectGlobal } from "styled-components";
+import { CloudinaryContext } from 'cloudinary-react';
 
 import { Header } from "../components";
 
@@ -36,6 +37,14 @@ const Container = styled.div`
   background-color: #f0f9fc;
 `;
 
+const CloudinaryView = styled(CloudinaryContext)`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+  background-color: #f0f9fc;
+`;
+
 const Layout: SFC<IProps> = ({ children }) => (
   <Container>
     <Helmet>
@@ -43,7 +52,9 @@ const Layout: SFC<IProps> = ({ children }) => (
       <title>HY</title>
     </Helmet>
     <Header />
-    {children()}
+    <CloudinaryView cloudName="one-person">
+      {children()}
+    </CloudinaryView>
   </Container>
 );
 
