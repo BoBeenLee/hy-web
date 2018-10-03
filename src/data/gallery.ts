@@ -1,7 +1,14 @@
+
+interface IVideoItem {
+    videoUrl: string;
+    videoOrder: number;
+}
+
 interface IGallery {
     id: string;
     thumbnail: string;
     images?: string[];
+    videos?: IVideoItem[],
     isDrop?: boolean;
 }
 
@@ -20,6 +27,12 @@ const galleryData: IGallery[] = [
             `${PREFIX("P1")}/3.gif`,
             `${PREFIX("P1")}/4.gif`,
             `${PREFIX("P1")}/5.gif`
+        ],
+        videos: [
+            {
+                videoUrl: "7tVASM9VTkE",
+                videoOrder: 0
+            }
         ]
     },
     {
@@ -50,6 +63,15 @@ const galleryData: IGallery[] = [
             `${PREFIX("P5")}/6.gif`,
             `${PREFIX("P5")}/7.png`,
             `${PREFIX("P5")}/8.png`
+        ]
+    },
+    {
+        id: "P6",
+        thumbnail: PREFIX_THUMBNAIL("P6"),
+        images: [
+            `${PREFIX("P6")}/1.png`,
+            `${PREFIX("P6")}/2.png`,
+            `${PREFIX("P6")}/3.png`
         ]
     },
     {
@@ -196,6 +218,12 @@ const galleryData: IGallery[] = [
         thumbnail: PREFIX_THUMBNAIL("P29"),
         images: [
             `${PREFIX("P29")}/1.png`
+        ],
+        videos: [
+            {
+                videoUrl: "KvhkOwL13ks",
+                videoOrder: 0
+            }
         ]
     },
     {
@@ -240,6 +268,12 @@ const galleryData: IGallery[] = [
             `${PREFIX("P35")}/5.png`,
             `${PREFIX("P35")}/6.png`,
             `${PREFIX("P35")}/7.png`
+        ],
+        videos: [
+            {
+                videoUrl: "NkyG99J2_Xs",
+                videoOrder: 1
+            }
         ]
     },
     {
@@ -288,6 +322,12 @@ const galleryData: IGallery[] = [
             `${PREFIX("P40")}/5.png`,
             `${PREFIX("P40")}/6.png`,
             `${PREFIX("P40")}/7.png`,
+        ],
+        videos: [
+            {
+                videoUrl: "IBryomDdxjo",
+                videoOrder: 1
+            }
         ]
     },
     {
@@ -335,6 +375,20 @@ const galleryData: IGallery[] = [
             `${PREFIX("P46")}/2.png`,
             `${PREFIX("P46")}/3.png`,
             `${PREFIX("P46")}/4.png`
+        ],
+        videos: [
+            {
+                videoUrl: "OKOlc5f1HQ0",
+                videoOrder: 1
+            },
+            {
+                videoUrl: "Wb0OfQof8W0",
+                videoOrder: 2
+            },
+            {
+                videoUrl: "XKHUvgTxLio",
+                videoOrder: 3
+            }
         ]
     },
     {

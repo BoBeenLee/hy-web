@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import YouTube from 'react-youtube';
 import React, { Component, RefObject } from "react";
 import styled from 'styled-components';
 import { Image, Transformation } from 'cloudinary-react';
@@ -40,6 +41,16 @@ const ContentImage = styled(Image)`
     width: 100%;
     object-fit: contain;
 `;
+
+const ContentVideo = styled(YouTube)`
+    text-align: center;
+    background-color: #f0f9fc;
+`;
+
+/*
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/OKOlc5f1HQ0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+*/
 
 const SideBar = styled.div`
     width: 340px;
@@ -105,6 +116,14 @@ const data: { [key: string]: IGalleryItem[] } = {
     })
 }
 
+const videoOpts = {
+    height: '390',
+    width: '100%',
+    playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+    }
+};
+
 class GalleryPage extends Component<object, IStates> {
     public state: IStates = {
         currentMenuName: "Brand",
@@ -130,11 +149,7 @@ class GalleryPage extends Component<object, IStates> {
                 <GalleryTopBar onMenuChange={this.onIndexChange} menus={["Brand", "UXUI", "Package", "Character", "Illustration"]} currentMenuName={currentMenuName} />
                 <Content>
                     <SideContent innerRef={this.sideContentRef}>
-                        {selectedGallery ? _.map(selectedGallery.images, image => {
-                            return (<ContentImage key={image} publicId={image}>
-                                <Transformation quality="100" />
-                            </ContentImage>)
-                        }) : null}
+                        {this.renderContent()}
                     </SideContent>
                     <SideBar innerRef={this.sideBarRef}>
                         {_.map(currentData, item => {
@@ -158,6 +173,38 @@ class GalleryPage extends Component<object, IStates> {
             </Container>
         );
     }
+
+    private renderContent = () => {
+        const { selectedGallery } = this.state;
+        const contents = [this.renderVideo(0)];
+
+        if (selectedGallery) {
+            _.forEach(selectedGallery.images, (image, index) => {
+                contents.push(
+                    (<ContentImage key={image} publicId={image}>
+                        <Transformation quality="100" />
+                    </ContentImage>)
+                );
+                contents.push(this.renderVideo(index + 1));
+            });
+        };
+        return <React.Fragment>{_.map(contents, content => content)}</React.Fragment>;
+    }
+
+    private renderVideo = (videoOrder: number) => {
+        const { selectedGallery } = this.state;
+        if (!selectedGallery.videos) {
+            return null;
+        }
+        const videoItem = _.find(selectedGallery.videos, video => {
+            return video.videoOrder === videoOrder;
+        });
+        if (!videoItem) {
+            return null;
+        }
+        return <ContentVideo key={`${videoItem.videoUrl}`} videoId={videoItem.videoUrl} opts={videoOpts} />
+    };
+
 
     private onIndexChange = (name: string) => {
         this.setState({
