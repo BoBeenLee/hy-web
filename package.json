@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter",
   "version": "1.0.0",
-  "description": "Gatsby 1.0 starter",
-  "author": "fabien0102 <fabien0102@gmail.com>",
+  "description": "HY Web",
+  "author": "bobeenlee <cultisttp@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",

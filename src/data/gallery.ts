@@ -199,6 +199,15 @@ const galleryData: IGallery[] = [
         ]
     },
     {
+        id: "P30",
+        thumbnail: PREFIX_THUMBNAIL("P30"),
+        images: [
+            `${PREFIX("P30")}/1.png`,
+            `${PREFIX("P30")}/2.png`,
+            `${PREFIX("P30")}/3.png`,
+        ]
+    },
+    {
         id: "P31",
         thumbnail: PREFIX_THUMBNAIL("P31"),
         images: [
@@ -257,6 +266,15 @@ const galleryData: IGallery[] = [
         images: [
             `${PREFIX("P38")}/1.png`,
             `${PREFIX("P38")}/2.png`
+        ]
+    },
+    {
+        id: "P39",
+        thumbnail: PREFIX_THUMBNAIL("P39"),
+        images: [
+            `${PREFIX("P39")}/1.png`,
+            `${PREFIX("P39")}/2.png`,
+            `${PREFIX("P39")}/3.png`,
         ]
     },
     {
