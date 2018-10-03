@@ -66,6 +66,7 @@ const ThumbnailView = styled.div``;
 
 const Profile = styled(People2Card).attrs<{ isActive: boolean; }>({})`
     ${({ isActive }) => isActive ? 'display: flex' : 'display: none'};
+    border-radius: 8px;
     margin-bottom: 24px;
 `;
 
@@ -73,6 +74,7 @@ const Thumbnail = styled(Image).attrs<{ isActive: boolean; }>({})`
     width: 291px;
     height: 194px;
     cursor: pointer;
+    border-radius: 8px;
     margin-bottom: 24px;
     ${({ isActive }) => isActive ? 'display: none' : 'display: flex'};
 `;

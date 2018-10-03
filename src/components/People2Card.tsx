@@ -19,6 +19,7 @@ const Container = styled.div.attrs<{ isActive: boolean; }>({})`
 const ProfileImage = styled.img`
     display: block;
     width: 100%;
+    border-radius: 8px;
     background-size: cover;
     object-fit: cover;
 `;
