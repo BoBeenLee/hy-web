@@ -118,10 +118,7 @@ const data: { [key: string]: IGalleryItem[] } = {
 
 const videoOpts = {
     height: '390',
-    width: '100%',
-    playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-    }
+    width: '100%'
 };
 
 class GalleryPage extends Component<object, IStates> {
