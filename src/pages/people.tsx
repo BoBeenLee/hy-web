@@ -168,9 +168,9 @@ class PeoplePage extends Component<object, IStates> {
                             {_.map(chunkArray, (chunkItem, index) => {
                                 return (
                                     <PeopleTR key={`tr${index}`}>
-                                        {_.map(chunkItem, people => {
+                                        {_.map(chunkItem, (people) => {
                                             const isActive = selectedPeople === people;
-                                            return (<PeopleTD key={`other${index}`} onClick={_.partial(this.onSelectedPeople, people)}>
+                                            return (<PeopleTD key={`other${people.id}`} onClick={_.partial(this.onSelectedPeople, people)}>
                                                 <PeopleCardView
                                                     isActive={isActive}
                                                     name={people.name}
