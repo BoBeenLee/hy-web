@@ -21,10 +21,10 @@ const MainView = styled.div`
 `;
 
 const Main1Image = styled.img`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   width: 806px;
 `;
 
@@ -32,8 +32,8 @@ const Main2Image = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 2;
   width: 977px;
+  z-index: 2;
 `;
 
 const Main3Image = styled.img`
@@ -42,6 +42,7 @@ const Main3Image = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 `;
 
 const Main4ImageView = styled.div`
@@ -94,6 +95,7 @@ const IntroView = styled.div`
   position: relative;
   width: 100%;
   min-height: 1608.7px;
+  z-index: 3;
 `;
 
 const Intro1Image = styled.img`

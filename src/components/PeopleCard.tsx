@@ -17,7 +17,7 @@ const Container = styled.div.attrs<{ isActive: boolean; }>({})`
     ${({ isActive }) => isActive ? 'box-shadow: 1px 1px 5px 2px #6fc7e2;' : ''};
 `;
 
-const ProfileImage = styled.img`
+const ProfileImage = styled.img.attrs<{ hideInfo: boolean }>({})`
     display: block;
     width: 100%;
     height: 150px;
@@ -25,6 +25,10 @@ const ProfileImage = styled.img`
     border-top-right-radius: 8px;
     background-size: cover;
     object-fit: cover;
+    ${({ hideInfo }) => hideInfo ? `
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    ` : ''};
 `;
 
 const BottomView = styled.div`
@@ -58,7 +62,7 @@ class PeopleCard extends Component<IProps> {
         const { isActive, className, name, role, profileImage, hideInfo } = this.props;
         return (
             <Container className={className} isActive={isActive}>
-                <ProfileImage src={profileImage} />
+                <ProfileImage hideInfo={hideInfo} src={profileImage} />
                 {hideInfo ? null : <BottomView>
                     <NameText>{name}</NameText>
                     <RoleText>{role}</RoleText>
