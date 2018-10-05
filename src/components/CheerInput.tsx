@@ -22,7 +22,7 @@ const Container = styled.form`
 
 const Input = styled.input`
     font-size: 18px;
-    color: #dadada;
+    color: #939eab;
     width: 100%;
     height: 27px;
     border-width: 0px;
