@@ -30,7 +30,7 @@ const galleryData: IGallery[] = [
         ],
         videos: [
             {
-                videoUrl: "7tVASM9VTkE",
+                videoUrl: "nplGwGT_-c4",
                 videoOrder: 0
             }
         ]
@@ -276,6 +276,12 @@ const galleryData: IGallery[] = [
         images: [
             `${PREFIX("P36")}/1.png`,
             `${PREFIX("P36")}/2.png`
+        ],
+        videos: [
+            {
+                videoUrl: "G-qN7j_UhWM",
+                videoOrder: 1
+            }
         ]
     },
     {
