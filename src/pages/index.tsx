@@ -24,7 +24,7 @@ const Main1Image = styled.img`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 806px;
 `;
 
