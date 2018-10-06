@@ -82,7 +82,6 @@ const galleryData: IGallery[] = [
             `${PREFIX("P7")}/2.gif`,
             `${PREFIX("P7")}/3.png`,
             `${PREFIX("P7")}/4.gif`,
-            `${PREFIX("P7")}/5.png`,
             `${PREFIX("P7")}/6.png`
         ]
     },
