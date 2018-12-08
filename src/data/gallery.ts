@@ -216,7 +216,14 @@ const galleryData: IGallery[] = [
         id: "P29",
         thumbnail: PREFIX_THUMBNAIL("P29"),
         images: [
-            `${PREFIX("P29")}/1.png`
+            `${PREFIX("P29")}/1.png`,
+            `${PREFIX("P29")}/2.png`
+        ],
+        videos: [
+            {
+                videoUrl: "oZ_pfSqOAOE",
+                videoOrder: 1
+            }
         ]
     },
     {
